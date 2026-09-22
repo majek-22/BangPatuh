@@ -74,6 +74,11 @@ class ComplianceApplication : Application() {
         super.onCreate()
         ensureFirebaseInitialized(this)
         initWebViewCacheDirectories()
+        try {
+            com.example.notification.DailyNotificationScheduler.initNotificationChannelAndSchedule(this)
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to initialize daily notification scheduler: ${e.message}")
+        }
     }
 
     private fun initWebViewCacheDirectories() {

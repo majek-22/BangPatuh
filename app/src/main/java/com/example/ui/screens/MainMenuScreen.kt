@@ -51,6 +51,8 @@ import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.VolumeOff
 import androidx.compose.material.icons.filled.VolumeUp
+import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.NotificationsActive
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -73,6 +75,16 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.platform.LocalContext
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
+import com.example.notification.DailyComplianceRepository
+import com.example.notification.DailyNotificationScheduler
+import com.example.ui.components.DailyComplianceScrollDialog
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
@@ -111,6 +123,7 @@ fun MainMenuScreen(
     currentLanguage: String,
     isAudioMuted: Boolean,
     shouldShowComic: Boolean = false,
+    initialShowDailyNotifMessageId: Int? = null,
     onComicDismissed: () -> Unit = {},
     onStartShift: () -> Unit,
     onOpenLeaderboard: () -> Unit,
@@ -124,6 +137,37 @@ fun MainMenuScreen(
     onResumeMusic: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
+    val context = LocalContext.current
+    var showDailyNotifDialog by remember { mutableStateOf(false) }
+    var targetDailyNotifMessageId by remember { mutableStateOf<Int?>(null) }
+    var isDailyNotifRead by remember { mutableStateOf(DailyComplianceRepository.isTodayRead(context)) }
+
+    LaunchedEffect(initialShowDailyNotifMessageId) {
+        if (initialShowDailyNotifMessageId != null) {
+            targetDailyNotifMessageId = initialShowDailyNotifMessageId
+            showDailyNotifDialog = true
+        }
+    }
+
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+        val notificationPermissionLauncher = rememberLauncherForActivityResult(
+            contract = ActivityResultContracts.RequestPermission()
+        ) { isGranted ->
+            if (isGranted) {
+                DailyNotificationScheduler.scheduleDaily730AmAlarm(context)
+            }
+        }
+        LaunchedEffect(Unit) {
+            if (ContextCompat.checkSelfPermission(
+                    context,
+                    Manifest.permission.POST_NOTIFICATIONS
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            }
+        }
+    }
+
     val infiniteTransition = rememberInfiniteTransition(label = "menu_anim")
 
     val pulseScale by infiniteTransition.animateFloat(
@@ -210,7 +254,9 @@ fun MainMenuScreen(
         ) {
             MainMenuTopBar(
                 currentUser = currentUser, userAvatarId = userAvatarId, currentLanguage = currentLanguage,
-                isAudioMuted = isAudioMuted, onOpenProfile = onOpenProfile, onOpenComic = { showComicDialog = true },
+                isAudioMuted = isAudioMuted, isDailyNotifRead = isDailyNotifRead,
+                onOpenDailyNotification = { showDailyNotifDialog = true },
+                onOpenProfile = onOpenProfile, onOpenComic = { showComicDialog = true },
                 onOpenLeaderboard = onOpenLeaderboard, onOpenGlossary = onOpenGlossary,
                 onToggleLanguage = onToggleLanguage, onSelectLanguage = onSelectLanguage,
                 onToggleAudioMute = onToggleAudioMute, onLogout = onLogout
@@ -337,6 +383,15 @@ fun MainMenuScreen(
         }
         if (showChatPopup) ComplianceChatbotPopup(onDismiss = { showChatPopup = false })
         if (showComicDialog) ComplianceComicDialog(onDismiss = { showComicDialog = false; onComicDismissed() })
+        DailyComplianceScrollDialog(
+            isOpen = showDailyNotifDialog,
+            currentLanguage = currentLanguage,
+            initialMessageId = targetDailyNotifMessageId,
+            onDismiss = { showDailyNotifDialog = false },
+            onComplyConfirmed = {
+                isDailyNotifRead = true
+            }
+        )
     }
 }
 
@@ -368,6 +423,8 @@ private fun Modifier.menuScaleAnimation(interactionSource: MutableInteractionSou
 @Composable
 private fun MainMenuTopBar(
     currentUser: String?, userAvatarId: Int, currentLanguage: String, isAudioMuted: Boolean,
+    isDailyNotifRead: Boolean = true,
+    onOpenDailyNotification: () -> Unit = {},
     onOpenProfile: () -> Unit, onOpenComic: () -> Unit, onOpenLeaderboard: () -> Unit, onOpenGlossary: () -> Unit,
     onToggleLanguage: () -> Unit, onSelectLanguage: ((String) -> Unit)?, onToggleAudioMute: () -> Unit, onLogout: () -> Unit
 ) {
@@ -388,6 +445,52 @@ private fun MainMenuTopBar(
             }
         }
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            // Daily Compliance Notification Button (Pojok Kanan Atas)
+            Surface(
+                shape = RoundedCornerShape(14.dp),
+                color = Color(0xDD091522),
+                border = BorderStroke(
+                    1.2.dp,
+                    Brush.horizontalGradient(
+                        if (!isDailyNotifRead) listOf(Color(0xFFFF5252), Color(0xFFFFD54F))
+                        else listOf(Color(0x66FFD54F), Color(0x33FFB300))
+                    )
+                ),
+                shadowElevation = if (!isDailyNotifRead) 8.dp else 4.dp
+            ) {
+                val notifInteraction = remember { MutableInteractionSource() }
+                Box(
+                    modifier = Modifier
+                        .size(38.dp)
+                        .menuScaleAnimation(notifInteraction)
+                        .clip(RoundedCornerShape(14.dp))
+                        .clickable(
+                            interactionSource = notifInteraction,
+                            indication = null,
+                            onClick = onOpenDailyNotification
+                        ),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Icon(
+                        imageVector = if (!isDailyNotifRead) Icons.Default.NotificationsActive else Icons.Default.Notifications,
+                        contentDescription = "Daily Compliance Notification",
+                        tint = if (!isDailyNotifRead) Color(0xFFFFD54F) else Color(0xFFB0BEC5),
+                        modifier = Modifier.size(19.dp)
+                    )
+                    if (!isDailyNotifRead) {
+                        Box(
+                            modifier = Modifier
+                                .align(Alignment.TopEnd)
+                                .padding(top = 5.dp, end = 5.dp)
+                                .size(8.dp)
+                                .clip(CircleShape)
+                                .background(Color(0xFFFF1744))
+                                .border(1.dp, Color.White, CircleShape)
+                        )
+                    }
+                }
+            }
+
             Surface(shape = RoundedCornerShape(14.dp), color = Color(0xDD091522), border = BorderStroke(1.dp, Brush.horizontalGradient(listOf(Color(0x5500E5FF), Color(0x3364B5F6), Color(0x44FFD54F)))), shadowElevation = 6.dp) {
                 Row(modifier = Modifier.padding(horizontal = 4.dp, vertical = 3.dp), verticalAlignment = Alignment.CenterVertically) {
                     val comicInteraction = remember { MutableInteractionSource() }

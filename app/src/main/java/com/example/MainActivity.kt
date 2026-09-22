@@ -1,5 +1,6 @@
 package com.example
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -13,11 +14,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsAnimationCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.Lifecycle
@@ -25,6 +26,8 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.notification.DailyComplianceRepository
+import com.example.notification.DailyNotificationScheduler
 import com.example.ui.screens.GameScreen
 import com.example.ui.screens.IconGlossaryScreen
 import com.example.ui.screens.LeaderboardScreen
@@ -40,14 +43,13 @@ import com.example.ui.viewmodel.GameViewModel
 
 class MainActivity : AppCompatActivity() {
 
-    private var isImeAnimationRunning = false
-    private var lastImeHideTimestamp = 0L
+    private val pendingDailyNotifMessageId = mutableStateOf<Int?>(null)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        handleIntentForDailyNotif(intent)
         ComplianceApplication.ensureFirebaseInitialized(application)
         enableEdgeToEdge()
-        setupInsetsAnimationListener()
         hideSystemNavigationBar()
         setContent {
             ComplianceSlicerTheme {
@@ -55,92 +57,48 @@ class MainActivity : AppCompatActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = androidx.compose.ui.graphics.Color.White
                 ) {
-                    ComplianceSlicerApp()
+                    ComplianceSlicerApp(
+                        initialDailyNotifMessageId = pendingDailyNotifMessageId.value
+                    )
                 }
             }
         }
     }
 
-    private fun setupInsetsAnimationListener() {
-        val decorView = window?.decorView ?: return
-        ViewCompat.setWindowInsetsAnimationCallback(
-            decorView,
-            object : WindowInsetsAnimationCompat.Callback(DISPATCH_MODE_CONTINUE_ON_SUBTREE) {
-                override fun onPrepare(animation: WindowInsetsAnimationCompat) {
-                    if ((animation.typeMask and WindowInsetsCompat.Type.ime()) != 0) {
-                        isImeAnimationRunning = true
-                    }
-                }
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleIntentForDailyNotif(intent)
+    }
 
-                override fun onStart(
-                    animation: WindowInsetsAnimationCompat,
-                    bounds: WindowInsetsAnimationCompat.BoundsCompat
-                ): WindowInsetsAnimationCompat.BoundsCompat {
-                    if ((animation.typeMask and WindowInsetsCompat.Type.ime()) != 0) {
-                        isImeAnimationRunning = true
-                    }
-                    return bounds
-                }
-
-                override fun onProgress(
-                    insets: WindowInsetsCompat,
-                    runningAnimations: MutableList<WindowInsetsAnimationCompat>
-                ): WindowInsetsCompat {
-                    decorView.postInvalidateOnAnimation()
-                    return insets
-                }
-
-                override fun onEnd(animation: WindowInsetsAnimationCompat) {
-                    if ((animation.typeMask and WindowInsetsCompat.Type.ime()) != 0) {
-                        isImeAnimationRunning = false
-                        lastImeHideTimestamp = System.currentTimeMillis()
-                        // Invalidate to commit the final animation frame so FrameTracker completes the CUJ
-                        decorView.postInvalidateOnAnimation()
-                        decorView.postDelayed({
-                            if (!isDestroyed && !isFinishing && !isImeAnimationRunning) {
-                                hideSystemNavigationBar()
-                            }
-                        }, 250L)
-                    }
-                }
-            }
-        )
+    private fun handleIntentForDailyNotif(intent: Intent?) {
+        if (intent == null) return
+        val openNotif = intent.getBooleanExtra(DailyNotificationScheduler.EXTRA_OPEN_DAILY_NOTIF, false)
+        val msgId = intent.getIntExtra(DailyNotificationScheduler.EXTRA_MESSAGE_ID, -1)
+        if (openNotif || msgId != -1) {
+            val resolvedId = if (msgId != -1) msgId else DailyComplianceRepository.getTodayMessage().id
+            pendingDailyNotifMessageId.value = resolvedId
+        }
     }
 
     override fun onResume() {
         super.onResume()
-        decorViewPostSafeHide(500L)
+        hideSystemNavigationBar()
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         if (hasFocus) {
-            decorViewPostSafeHide(500L)
+            hideSystemNavigationBar()
         }
-    }
-
-    private fun decorViewPostSafeHide(delayMs: Long) {
-        window?.decorView?.postDelayed({
-            if (!isDestroyed && !isFinishing && !isImeAnimationRunning) {
-                hideSystemNavigationBar()
-            }
-        }, delayMs)
     }
 
     fun hideSystemNavigationBar() {
-        if (isImeAnimationRunning) {
-            return
-        }
-        // If IME just finished closing within the last 200ms, wait before hiding system bars
-        if (System.currentTimeMillis() - lastImeHideTimestamp < 200L) {
-            return
-        }
         val window = window ?: return
         val decorView = window.decorView ?: return
         val rootInsets = ViewCompat.getRootWindowInsets(decorView)
-        // If the soft keyboard (IME) is visible or animating, do NOT touch system bars!
-        val isImeVisible = rootInsets?.isVisible(WindowInsetsCompat.Type.ime()) == true
-        if (isImeVisible || isImeAnimationRunning) {
+        // If the soft keyboard (IME) is visible, do NOT hide system bars to avoid interrupting IME animations
+        if (rootInsets?.isVisible(WindowInsetsCompat.Type.ime()) == true) {
             return
         }
 
@@ -148,7 +106,6 @@ class MainActivity : AppCompatActivity() {
         insetsController.systemBarsBehavior =
             WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
 
-        // Only request hide if navigation bars or status bars are currently showing
         val areBarsVisible = rootInsets == null ||
             rootInsets.isVisible(WindowInsetsCompat.Type.navigationBars()) ||
             rootInsets.isVisible(WindowInsetsCompat.Type.statusBars())
@@ -161,6 +118,7 @@ class MainActivity : AppCompatActivity() {
 
 @Composable
 fun ComplianceSlicerApp(
+    initialDailyNotifMessageId: Int? = null,
     viewModel: GameViewModel = viewModel(),
     modifier: Modifier = Modifier
 ) {
@@ -256,6 +214,7 @@ fun ComplianceSlicerApp(
                     currentLanguage = uiState.currentLanguage,
                     isAudioMuted = uiState.isAudioMuted,
                     shouldShowComic = uiState.shouldShowComic,
+                    initialShowDailyNotifMessageId = initialDailyNotifMessageId,
                     onComicDismissed = { viewModel.onComicDismissed() },
                     onStartShift = { viewModel.navigateTo(GamePhase.LEVEL_SELECT) },
                     onOpenLeaderboard = { viewModel.navigateTo(GamePhase.LEADERBOARD) },
