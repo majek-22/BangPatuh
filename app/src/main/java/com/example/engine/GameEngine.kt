@@ -731,7 +731,7 @@ class GameEngine(
         }
 
         item.sliced = true
-        item.isCombo4xSliced = false
+        item.isCombo4xSliced = (comboMultiplier >= 4)
         item.sliceAngle = sliceAngle
 
         val sliceRad = sliceAngle * (PI.toFloat() / 180f)
@@ -872,8 +872,7 @@ class GameEngine(
         val currentCount = slicedCategoriesMap.getOrDefault(item.category, 0)
         slicedCategoriesMap[item.category] = currentCount + 1
 
-        val effectiveMultiplier = if (strokeViolationCount >= 3) comboMultiplier * 2 else comboMultiplier
-        onViolationSliced?.invoke(item, finalPoints, effectiveMultiplier)
+        onViolationSliced?.invoke(item, finalPoints, comboMultiplier)
     }
 
     /**

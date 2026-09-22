@@ -86,6 +86,7 @@ class MainActivity : AppCompatActivity() {
                     insets: WindowInsetsCompat,
                     runningAnimations: MutableList<WindowInsetsAnimationCompat>
                 ): WindowInsetsCompat {
+                    decorView.postInvalidateOnAnimation()
                     return insets
                 }
 
@@ -93,12 +94,13 @@ class MainActivity : AppCompatActivity() {
                     if ((animation.typeMask and WindowInsetsCompat.Type.ime()) != 0) {
                         isImeAnimationRunning = false
                         lastImeHideTimestamp = System.currentTimeMillis()
-                        // Allow IME close animation to fully settle (800ms) before re-hiding navigation bars
+                        // Invalidate to commit the final animation frame so FrameTracker completes the CUJ
+                        decorView.postInvalidateOnAnimation()
                         decorView.postDelayed({
                             if (!isDestroyed && !isFinishing && !isImeAnimationRunning) {
                                 hideSystemNavigationBar()
                             }
-                        }, 800L)
+                        }, 250L)
                     }
                 }
             }
@@ -129,8 +131,8 @@ class MainActivity : AppCompatActivity() {
         if (isImeAnimationRunning) {
             return
         }
-        // If IME just finished closing within the last 600ms, wait before hiding system bars
-        if (System.currentTimeMillis() - lastImeHideTimestamp < 600L) {
+        // If IME just finished closing within the last 200ms, wait before hiding system bars
+        if (System.currentTimeMillis() - lastImeHideTimestamp < 200L) {
             return
         }
         val window = window ?: return

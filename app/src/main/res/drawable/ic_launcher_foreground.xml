@@ -2,8 +2,8 @@
 <!-- Ukuran width & height 40dp disesuaikan agar proporsional di tengah -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:width="70dp"
-        android:height="70dp"
+        android:width="72dp"
+        android:height="72dp"
         android:drawable="@drawable/ic_launcher_fg"
         android:gravity="center" />
 </layer-list>
