@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Circle background -->
+    <path
+        android:fillColor="#243B48"
+        android:pathData="M24,2a22,22 0 1,0 0,44a22,22 0 1,0 0,-44z" />
+    <!-- Head/Face -->
+    <path
+        android:fillColor="#FDD8BA"
+        android:pathData="M24,12a6.5,6.5 0 1,0 0,13a6.5,6.5 0 1,0 0,-13z" />
+    <!-- Pixie Cut Hair -->
+    <path
+        android:fillColor="#0284C7"
+        android:pathData="M16.5,14c0,-6 4,-7 7.5,-7s7,2 7,6c-3,-1 -6,0 -8,1c-2,1 -4,1 -6.5,0z" />
+    <!-- Over-Ear Headphone Neck Band -->
+    <path
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="2"
+        android:pathData="M19,26c0,2.5 2.5,4.5 5,4.5s5,-2 5,-4.5" />
+    <!-- Cyan Jacket Shoulders -->
+    <path
+        android:fillColor="#0369A1"
+        android:pathData="M11,42c0,-7 5,-12 13,-12s13,5 13,12z" />
+</vector>

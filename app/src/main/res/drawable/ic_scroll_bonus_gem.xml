@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="26dp"
+    android:height="26dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <!-- Top Crown -->
+    <path
+        android:fillColor="#00E676"
+        android:strokeColor="#B9F6CA"
+        android:strokeWidth="0.8"
+        android:pathData="M8,7 L24,7 L29,13 L3,13 Z" />
+    <path
+        android:fillColor="#69F0AE"
+        android:pathData="M12,7 L20,7 L22,13 L10,13 Z" />
+    <!-- Lower Pavilion -->
+    <path
+        android:fillColor="#00C853"
+        android:strokeColor="#B9F6CA"
+        android:strokeWidth="0.8"
+        android:pathData="M3,13 L29,13 L16,28 Z" />
+    <path
+        android:fillColor="#00E676"
+        android:pathData="M10,13 L22,13 L16,28 Z" />
+    <!-- Top Center Facet Highlight -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M14,8 L18,8 L19,12 L13,12 Z" />
+    <!-- Sparkle Stars -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M26,4 C26,5.5 27,6.5 28.5,6.5 C27,6.5 26,7.5 26,9 C26,7.5 25,6.5 23.5,6.5 C25,6.5 26,5.5 26,4 Z" />
+</vector>

@@ -1,0 +1,6 @@
+{
+  "name": "BangPatuh",
+  "description": "Fast-paced arcade compliance game where players slice corporate violations while protecting legitimate business procedures.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

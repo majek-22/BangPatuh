@@ -1,0 +1,462 @@
+<resources>
+    <string name="app_name">従順な兄弟</string>
+    <string name="game_tagline">企業倫理・コンプライアンスアーケード</string>
+    <string name="start_shift_button">業務開始</string>
+    <string name="how_to_play">遊び方</string>
+    <string name="high_score_label">ハイスコア</string>
+    <string name="legend_title">コンプライアンス規則</string>
+    <string name="legend_violations_header">斬る（違反行為）:</string>
+    <string name="legend_violations_desc">不正行為を一刀両断してリスクを未然に防ぎ、コンボポイントを獲得しましょう。</string>
+    <string name="legend_legitimate_header">守る（正規手続き）:</string>
+    <string name="legend_legitimate_desc">正規の文書や手続きは絶対に斬らないでください。誤って斬るとライフが1減少します。</string>
+    <string name="legend_shield_header">ボーナス（黄金のシールド）:</string>
+    <string name="legend_shield_desc">稀に出現する黄金シールドを斬ると、ライフが+1回復（最大4）しボーナススコアを獲得できます。</string>
+    <string name="legend_miss_penalty">違反見逃し警告: 違反行為を画面外へ逃すとライフが1減少します！</string>
+
+    <!-- HUD Strings -->
+    <string name="hud_score">スコア</string>
+    <string name="hud_time">タイム</string>
+    <string name="hud_combo">コンボ</string>
+    <string name="hud_paused">一時停止</string>
+    <string name="hud_resume">再開</string>
+    <string name="hud_restart">リトライ</string>
+    <string name="hud_exit">終了</string>
+
+    <!-- Feedback alerts -->
+    <string name="alert_wrong_slice_title">誤切断！</string>
+    <string name="alert_wrong_slice_msg">正規手続きを切断してしまいました: %1$s</string>
+    <string name="alert_missed_violation">違反行為を見逃した！ペナルティ: ライフ-1</string>
+    <string name="alert_shield_gained">+1 ライフ！コンプライアンスシールド獲得！</string>
+
+    <!-- Result Screen -->
+    <string name="result_title">業務報告書</string>
+    <string name="result_new_high_score">新ハイスコア達成！</string>
+    <string name="result_final_score">最終スコア</string>
+    <string name="result_final_score_label">最終スコア</string>
+    <string name="result_rank_label">役職ランク</string>
+    <string name="result_rank_prefix">役職ランク</string>
+    <string name="result_recap_title">コンプライアンス総括</string>
+    <string name="result_shift_debrief">コンプライアンス総括</string>
+    <string name="result_recap_heading">阻止した違反行為</string>
+    <string name="result_recap_subtitle">本シフト中に一刀両断し解決した不正・違反行為:</string>
+    <string name="result_recap_none_sliced">この回で阻止した違反はありません。下のカテゴリーを確認して次のシフトに備えましょう！</string>
+    <string name="result_recap_empty">この回で阻止した違反はありません。下のカテゴリーを確認して次のシフトに備えましょう！</string>
+    <string name="result_play_again">もう一度プレイ</string>
+    <string name="result_main_menu">メインメニュー</string>
+    <string name="result_times_neutralized">%1$d 回阻止</string>
+    <string name="result_neutralized_suffix">阻止完了</string>
+
+    <!-- Menu & HUD aliases -->
+    <string name="menu_title">コンプライアンス忍者</string>
+    <string name="menu_subtitle">バン・パトゥ (Bang Patuh)</string>
+    <string name="menu_start_shift">業務開始</string>
+    <string name="menu_compliance_slicer">コンプライアンス忍者</string>
+    <string name="menu_compliance_ninja">コンプライアンス忍者</string>
+    <string name="short_title_slice">斬る</string>
+    <string name="short_title_protect">守る</string>
+    <string name="short_title_avoid">回避</string>
+    <string name="short_title_collect">獲得</string>
+    <string name="menu_slice_violations_header">斬る — 違反行為</string>
+    <string name="menu_avoid_legitimate_header">回避 — 罠・誤報</string>
+    <string name="menu_protect_legitimate_header">守る — 正規手続き</string>
+    <string name="menu_collect_bonus_header">獲得 — ボーナス</string>
+    <string name="menu_drag_rules_hint">← スワイプして4つの指示を確認 →</string>
+    <string name="menu_feature_slow_mo_title">シネマティックスロー</string>
+    <string name="menu_feature_slow_mo_desc">爽快な大連撃コンボ演出</string>
+    <string name="menu_feature_slice_title">違反を一刀両断</string>
+    <string name="menu_feature_slice_desc">高潔性を守りハイスコアを狙え</string>
+    <string name="menu_feature_ethical_title">高潔な判断力を磨く</string>
+    <string name="menu_feature_ethical_desc">瞬時の決断が組織の未来を創る</string>
+    <string name="result_shift_recap">今回の業務振り返り</string>
+    <string name="rank_senior_officer">シニア・コンプライアンス担当官</string>
+    <string name="menu_high_score_label">ハイスコア</string>
+    <string name="menu_how_to_play">ルール</string>
+    <string name="menu_glossary">規則集</string>
+    <string name="menu_leaderboard">順位表</string>
+    <string name="menu_ask_me">AI質問</string>
+    <string name="menu_watch_trailer">予告編</string>
+    <string name="menu_game_trailer_title">ゲーム予告編</string>
+    <string name="menu_game_trailer_subtitle">バン・パトゥの活躍を動画で見る</string>
+    <string name="trailer_close">閉じる</string>
+    <string name="trailer_replay">もう一度再生</string>
+    <string name="trailer_play">再生</string>
+    <string name="trailer_pause">一時停止</string>
+    <string name="trailer_mute">ミュート</string>
+    <string name="trailer_unmute">ミュート解除</string>
+    <string name="chatbot_title">コンプライアンスAIアシスタント</string>
+    <string name="chatbot_subtitle">東京海上グループ • オンライン</string>
+    <string name="chatbot_close">閉じる</string>
+    <string name="chatbot_reload">再読み込み</string>
+    <string name="chatbot_loading">コンプライアンスアシスタントに接続中...</string>
+    <string name="chatbot_error_title">接続エラー</string>
+    <string name="chatbot_error_retry">再試行</string>
+    <string name="menu_ai_assistant">AIアシスタント</string>
+    <string name="gameplay_ready">準備...</string>
+    <string name="gameplay_game_over">ゲームオーバー</string>
+    <string name="hud_score_label">スコア</string>
+    <string name="hud_timer_label">タイム</string>
+    <string name="dialog_paused_title">一時停止</string>
+    <string name="dialog_resume">再開</string>
+    <string name="dialog_restart">リトライ</string>
+    <string name="dialog_quit_to_menu">メニューに戻る</string>
+
+    <!-- Ranks -->
+    <string name="rank_intern">コンプライアンス実習生</string>
+    <string name="rank_auditor">ジュニア監査役</string>
+    <string name="rank_officer">コンプライアンス担当官</string>
+    <string name="rank_risk_lead">統括リスクリーダー</string>
+    <string name="rank_director">最高コンプライアンス責任者 (CCO)</string>
+
+    <!-- Category Names -->
+    <string name="category_violation">違反行為</string>
+    <string name="category_trap">罠・誤報</string>
+    <string name="category_bonus">ボーナス</string>
+    <string name="category_legit">正規手続き</string>
+
+    <string name="cat_bribery">贈収賄</string>
+    <string name="cat_fraud">不正・詐欺</string>
+    <string name="cat_money_laundering">資金洗浄</string>
+    <string name="cat_data_breach">データ漏洩</string>
+    <string name="cat_systemic_corruption">組織的腐敗</string>
+    <string name="cat_official_document">公式文書</string>
+    <string name="cat_verified_approval">正規決裁</string>
+    <string name="cat_valid_partnership">正規提携</string>
+    <string name="cat_certification">認証規格</string>
+    <string name="cat_verified_invoice">正規請求書</string>
+    <string name="cat_shield">コンプライアンスシールド</string>
+    <string name="cat_bonus_corruptor">腐敗者</string>
+
+    <!-- Traps (Decoys - Avoid Slicing) -->
+    <string name="cat_false_alarm">誤報 (False Alarm)</string>
+    <string name="cat_unverified_rumor">未確認の噂</string>
+    <string name="cat_honest_mistake">事務的ミス</string>
+
+    <!-- Category Explanations (Compliance Value Reinforcement) -->
+    <string name="exp_bribery">腐敗防止法規: 金品や便宜などの贈収賄・不当な便宜供与の授受は、高潔性および法令違反となります。</string>
+    <string name="exp_fraud">社内記録の改ざん、署名偽造、架空計上などは企業の真実性と組織の信用を根底から損ないます。</string>
+    <string name="exp_money_laundering">マネーロンダリング防止規則 (AML-CFT): 犯罪収益の出所を隠蔽するための不審な取引の組成を未然に防止します。</string>
+    <string name="exp_data_breach">個人情報保護法規: 権限のない機密情報や顧客個人情報の持ち出し・開示は重大な法令違反となります。</string>
+    <string name="exp_systemic_corruption">組織的な権限の濫用は制度的信頼を失墜させ、企業全体に重い法的責任をもたらします。</string>
+    <string name="exp_official_document">承認済みの公式記録は適正に保管され、所定のガバナンス手続きに則って処理されなければなりません。</string>
+    <string name="exp_verified_approval">適切な二重チェックと管理職承認により、あらゆる業務判断における説明責任が担保されます。</string>
+    <string name="exp_valid_partnership">厳格な反社会的勢力・腐敗防止デューデリジェンスを通過した取引先は正当なビジネスパートナーです。</string>
+    <string name="exp_certification">公的規格およびISO認証は、国際的な安全および倫理基準の遵守を客観的に証明するものです。</string>
+    <string name="exp_verified_invoice">発注書（PO）と完全に一致する正規請求書は、架空請求から組織の財務健全性を保護します。</string>
+    <string name="exp_shield">日常的なリスク管理意識と内部統制は、企業の評判失墜や法定制裁を防ぐ強固な盾となります。</string>
+    <string name="exp_bonus_corruptor">特別フリーズボーナス！ゲームが5秒間停止します。連続スラッシュで不正資金を回収しボーナス点を獲得せよ！</string>
+    <string name="exp_false_alarm">根拠のないセキュリティ通報。事実確認を怠った拙速な対応は組織のリソースを浪費します。</string>
+    <string name="exp_unverified_rumor">事実の裏付けがない社内の噂話。真のコンプライアンスには憶測ではなく確証ある証拠が必要です。</string>
+    <string name="exp_honest_mistake">偶発的な入力ミスや形式の不備。単純な人為的ミスには厳罰ではなく丁寧な指導と再発防止が求められます。</string>
+
+    <!-- Trap Alerts & Scoring -->
+    <string name="alert_trap_sliced">罠を切断！ -10点（事実未確認の事象）</string>
+    <string name="freeze_bonus_title">フリーズボーナス！5秒間</string>
+    <string name="freeze_bonus_subtitle">制限時間内に連続スラッシュして大量ボーナスを獲得せよ！</string>
+    <string name="freeze_bonus_hud_title">❄️ フリーズボーナス！ ❄️</string>
+    <string name="freeze_bonus_corruptor_sub">腐敗者を連撃せよ！ %1$d 回連撃 (+%2$d 点)</string>
+    <string name="freeze_bonus_complete">フリーズ終了！ +%1$d 点 (%2$d スラッシュ)</string>
+
+    <!-- Glossary Screen -->
+    <string name="glossary_title">ゲームルール解説</string>
+    <string name="glossary_subtitle">現場識別マニュアル＆規律ガイド</string>
+    <string name="glossary_section_violations">違反行為（斬る対象）</string>
+    <string name="glossary_desc_violations">直ちに一刀両断してリスクを阻止。斬ると+10点×コンボ倍率のスコアを獲得。</string>
+    <string name="glossary_section_legitimate">正規手続き（斬ってはいけない対象）</string>
+    <string name="glossary_desc_legitimate">承認された適法な業務プロセス。誤って斬ると規律を乱しライフが1減少。</string>
+    <string name="glossary_section_traps">罠・誤報（回避する対象）</string>
+    <string name="glossary_desc_traps">違反に見せかけた囮や噂。未確認の憶測で動いてはいけません。斬ると-10点ペナルティ＆コンボリセット。</string>
+    <string name="glossary_section_bonus">ボーナス（コンプライアンスシールド）</string>
+    <string name="glossary_desc_bonus">稀に出現する黄金シールド。斬るとライフ+1回復（最大4）およびボーナス点を獲得。</string>
+
+    <!-- Auth (Login / Register) -->
+    <string name="auth_title">コンプライアンス忍者</string>
+    <string name="auth_subtitle">捜査官認証ターミナル</string>
+    <string name="auth_welcome_back">おかえりなさい、忍者！</string>
+    <string name="auth_welcome_subtitle">より高潔な明日を築くため、職務を再開してください。</string>
+    <string name="auth_register_welcome">部隊へ参加せよ、忍者！</string>
+    <string name="auth_register_welcome_subtitle">捜査官アカウントを作成し、組織の規律を守りましょう。</string>
+    <string name="auth_login_tab">ログイン</string>
+    <string name="auth_register_tab">新規登録</string>
+    <string name="auth_username_label">捜査官ユーザー名</string>
+    <string name="auth_username_placeholder">ユーザー名を入力</string>
+    <string name="auth_username_hint">最大10文字（半角英数字のみ）</string>
+    <string name="auth_error_username_invalid">ユーザー名は3〜10文字の半角英数字で入力してください</string>
+    <string name="auth_password_label">セキュリティパスワード</string>
+    <string name="auth_password_placeholder">パスワードを入力</string>
+    <string name="auth_remember_me">ログイン状態を保持</string>
+    <string name="auth_forgot_password">パスワードをお忘れですか？</string>
+    <string name="auth_login_btn">ログイン</string>
+    <string name="auth_register_btn">新規登録</string>
+    <string name="auth_or_continue_with">または別のアカウントで続ける</string>
+    <string name="auth_dont_have_account">アカウントをお持ちでないですか？</string>
+    <string name="auth_register_now">新規登録はこちら →</string>
+    <string name="auth_already_have_account">すでにアカウントをお持ちですか？</string>
+    <string name="auth_login_now">ログインはこちら →</string>
+    <string name="auth_error_empty_fields">ユーザー名とパスワードを入力してください</string>
+    <string name="auth_error_user_taken">このユーザー名は既に使用されています。別の名前を選択してください。</string>
+    <string name="auth_error_username_taken">このユーザー名は既に使用されています</string>
+    <string name="auth_error_invalid_credentials">ユーザー名またはパスワードが正しくありません</string>
+    <string name="auth_logout_btn">ログアウト</string>
+    <string name="auth_logout">ログアウト</string>
+    <string name="auth_logged_in_as">捜査官: %1$s</string>
+    <string name="auth_toggle_to_register">アカウントをお持ちでないですか？ 新規登録</string>
+    <string name="auth_toggle_to_login">すでにアカウントをお持ちですか？ ログイン</string>
+    <string name="auth_bang_patuh_title">バン・パトゥ</string>
+    <string name="auth_bang_patuh_subtitle">コンプライアンス忍者</string>
+    <string name="auth_slogan">より良い未来のため、高潔性を貫け</string>
+
+    <!-- Language & Audio Controls -->
+    <string name="language_toggle">言語切替</string>
+    <string name="audio_volume">オーディオ</string>
+    <string name="audio_mute">ミュート</string>
+    <string name="audio_unmute">ミュート解除</string>
+
+    <!-- Level Select & Difficulty -->
+    <string name="level_select_title">任務選択</string>
+    <string name="level_select_subtitle">捜査セクターを選択してください</string>
+    <string name="level_slice_hint">アイコンをスワイプして出動！</string>
+    <string name="level_locked_notice">ロック中: 前のセクターをクリアして解放</string>
+    <string name="level_info_title">任務概要</string>
+    <string name="level_info_tap_instruction">タップで詳細確認 • スワイプで出動</string>
+    <string name="popup_triple_slice">トリプルスラッシュ！ x2</string>
+    <string name="popup_multi_slice">マルチスラッシュ！ x2</string>
+    <string name="difficulty_label">難易度:</string>
+    <string name="difficulty_normal">ノーマル</string>
+    <string name="difficulty_hard">ハード (1.25倍)</string>
+    <string name="level_tier_1">インターン</string>
+    <string name="level_tier_2">スタッフ</string>
+    <string name="level_tier_3">マネージャー</string>
+    <string name="level_tier_boss">チーフ</string>
+
+    <string name="rank_chief_compliance_ninja">チーフ・コンプライアンス忍者</string>
+    <string name="rank_senior_risk_specialist">シニア・リスクスペシャリスト</string>
+    <string name="rank_lead_investigator">主任調査員</string>
+    <string name="rank_junior_auditor">ジュニア監査員</string>
+    <string name="rank_compliance_intern">コンプライアンス・インターン</string>
+
+    <string name="level_number">レベル %1$d</string>
+    <string name="level1_name">内部統制</string>
+    <string name="level1_desc">基礎訓練環境で贈収賄、不正、正規決裁の判別方法を習得します。</string>
+    <string name="level2_name">保険金請求と不正</string>
+    <string name="level2_desc">誤報や根拠のない噂を避けつつ、資金洗浄などの重大リスクを警戒・阻止します。</string>
+    <string name="level3_name">データ保護とプライバシー</string>
+    <string name="level3_desc">スピードが求められる監査の中、データ漏洩の脅威と偶発的なミスを瞬時に識別します。</string>
+    <string name="level4_name">金融犯罪と組織腐敗</string>
+    <string name="level4_desc">多面的な法的危機の中、深く根付いた組織的腐敗の温床を一掃します。</string>
+    <string name="level_best_score">最高スコア: %1$d</string>
+    <string name="level_play_btn">捜査開始</string>
+
+    <!-- Leaderboard & Stats -->
+    <string name="leaderboard_title">捜査官順位表</string>
+    <string name="leaderboard_tab_global">グローバルトップ100</string>
+    <string name="leaderboard_tab_my_stats">個人戦績</string>
+    <string name="tab_global_leaderboard">グローバルトップ100</string>
+    <string name="tab_my_stats">個人戦績</string>
+    <string name="leaderboard_rank_header">#</string>
+    <string name="leaderboard_user_header">捜査官</string>
+    <string name="leaderboard_score_header">スコア</string>
+    <string name="leaderboard_level_header">レベル</string>
+    <string name="leaderboard_diff_header">モード</string>
+    <string name="leaderboard_server_offline">サーバーオフライン</string>
+    <string name="leaderboard_offline_notice">サーバーオフライン — キャッシュデータを表示中</string>
+    <string name="leaderboard_offline_banner">サーバーオフライン — キャッシュデータを表示中</string>
+    <string name="leaderboard_refresh">更新</string>
+    <string name="leaderboard_empty">ランキング記録がまだありません。最初の挑戦者になりましょう！</string>
+    <string name="stats_overall_best">総合自己ベスト</string>
+    <string name="stats_personal_best">自己ベスト</string>
+    <string name="stats_best_score">ハイスコア</string>
+    <string name="stats_achieved_in">レベル %1$d で達成 (%2$s)</string>
+    <string name="stats_global_rank">グローバル順位: %1$s</string>
+    <string name="stats_rank_in_top100">第%1$d位 (100名中)</string>
+    <string name="stats_global_rank_top100">第%1$d位 (100名中)</string>
+    <string name="stats_outside_top100">トップ100圏外 — 任務を続けてランクインを目指しましょう！</string>
+    <string name="stats_global_rank_outside">トップ100圏外 — 任務を続けてランクインを目指しましょう！</string>
+    <string name="stats_lifetime_heading">累計捜査実績</string>
+    <string name="stats_career_totals">累計捜査実績</string>
+    <string name="stats_games_played">完了した任務数</string>
+    <string name="stats_violations_sliced">阻止した違反行為</string>
+    <string name="stats_traps_avoided">回避した罠・誤報</string>
+    <string name="stats_traps_sliced">誤って切断した罠</string>
+    <string name="stats_best_combo">最多連撃コンボ</string>
+    <string name="stats_best_combo_streak">最多連撃コンボ</string>
+    <string name="stats_level_table_heading">セクター別習熟度</string>
+    <string name="stats_level_mastery">セクター別習熟度</string>
+    <string name="stats_table_level">レベル</string>
+    <string name="stats_table_best">ハイスコア</string>
+    <string name="stats_table_stars">スター</string>
+
+    <!-- Result Screen Debrief Additions -->
+    <string name="result_traps_heading">識別判断結果</string>
+    <string name="result_traps_avoided_label">適正に回避: %1$d</string>
+    <string name="result_traps_sliced_label">誤切断: %1$d（各-10点）</string>
+    <string name="result_level_label">レベル %1$d • %2$s モード</string>
+    <string name="result_next_level">次の任務へ</string>
+    <string name="debug_overlay_label">安全領域オーバーレイ</string>
+
+    <!-- Glossary Dialog Strings -->
+    <string name="glossary_dialog_got_it">了解</string>
+    <string name="glossary_action_slice">斬る（一刀両断）</string>
+    <string name="glossary_action_avoid">守る（斬らない）</string>
+    <string name="glossary_action_trap">回避（罠）</string>
+    <string name="glossary_action_collect">獲得（ボーナス）</string>
+    <string name="glossary_label_category">分類カテゴリー</string>
+    <string name="glossary_label_gameplay_rule">ゲーム内アクション</string>
+    <string name="glossary_label_compliance_rule">コンプライアンス背景</string>
+    <!-- Floating Feedback Strings -->
+    <string name="popup_points_plus">+%1$d 点</string>
+    <string name="popup_trap_penalty">罠！ -10点</string>
+    <string name="popup_streak_break">コンボ途切れ！</string>
+    <string name="popup_wrong_target">誤切断！ -1ライフ</string>
+    <string name="popup_shield_bonus">+1 ライフ！</string>
+    <string name="popup_combo_format">%1$d連続コンボ！</string>
+
+    <!-- Mission Select Subtitles & Actions -->
+    <string name="level_slice_to_deploy">スワイプで出動</string>
+    <string name="level_tap_for_info">タップで概要確認</string>
+    <string name="level_locked_badge">ロック中</string>
+    <string name="level_status_active">挑戦可能</string>
+    <string name="level1_subtitle">基本決裁と贈収賄防止の徹底</string>
+    <string name="level2_subtitle">保険金請求とマネーロンダリング警戒</string>
+    <string name="level3_subtitle">データ保護とプライバシー侵害の阻止</string>
+    <string name="level4_subtitle">組織的腐敗の一掃と危機管理</string>
+
+    <!-- Profile Screen Strings -->
+    <string name="profile_title">捜査官プロフィール</string>
+    <string name="profile_badge_id">捜査官ID: #%1$s</string>
+    <string name="profile_avatar_title">アバター設定</string>
+    <string name="profile_close">閉じる</string>
+
+    <!-- Personal Stats Charts & History Strings -->
+    <string name="stats_chart_category_breakdown">カテゴリー別阻止実績</string>
+    <string name="stats_chart_score_progression">直近シフトのスコア推移</string>
+    <string name="stats_average_score">平均スコア</string>
+    <string name="stats_accuracy_rate">判断適正率</string>
+    <string name="stats_recent_shifts_title">捜査履歴ログ</string>
+    <string name="stats_no_history">完了した任務履歴がありません。任務に出動してグラフを記録しましょう！</string>
+    <string name="stats_session_date">日付</string>
+    <string name="stats_session_score">スコア</string>
+    <string name="stats_session_mission">任務</string>
+    <string name="stats_session_accuracy">適正率</string>
+    <string name="stats_legend_no_data">未阻止</string>
+
+    <!-- Enriched Categories & Explanations -->
+    <string name="cat_insider_trading">インサイダー取引</string>
+    <string name="exp_insider_trading">未公開の重要情報に基づく有価証券取引は、市場の公正性と信頼を著しく毀損します。</string>
+    <string name="cat_conflict_of_interest">利益相反</string>
+    <string name="exp_conflict_of_interest">公私の立場を混同し個人的または親族の利益を優先することは客観的判断を阻害します。</string>
+    <string name="cat_embezzlement">横領・背任</string>
+    <string name="exp_embezzlement">会社から預託された資金や資産を私的流用する行為は重大な背任・犯罪行為です。</string>
+    <string name="cat_compliance_audit">コンプライアンス監査</string>
+    <string name="exp_compliance_audit">業務プロセスが法令および社内規則に準拠しているかを検証する独立した評価手続きです。</string>
+    <string name="cat_ethics_training">倫理研修</string>
+    <string name="exp_ethics_training">全従業員が高潔な規範を維持し、違反リスクを主体的に予防するための継続的な啓蒙活動です。</string>
+    <string name="cat_transparency_report">透明性レポート</string>
+    <string name="exp_transparency_report">企業のガバナンス状況と社会的是正の取り組みを公開し、社会的説明責任を高めます。</string>
+    <string name="cat_phishing_bait">フィッシング訓練メール</string>
+    <string name="exp_phishing_bait">情報セキュリティ意識を測る擬似訓練。慌てて判断せず正規の報告手順を踏みましょう。</string>
+    <string name="cat_misfiled_memo">誤分類メモ</string>
+    <string name="exp_misfiled_memo">正当な文書の一時的な保管ミス。過度な処分ではなく適正な再分類と整理が必要です。</string>
+    <string name="cat_whistleblower">内部通報窓口 (WBS)</string>
+    <string name="exp_whistleblower">通報者のプライバシーを厳格に保護し、組織内の隠れた不正リスクを早期自浄する通報制度です。</string>
+    <string name="cat_star_auditor">模範監査人</string>
+    <string name="exp_star_auditor">組織の企業倫理とコンプライアンス推進に顕著な貢献を果たした捜査官への名誉表彰です。</string>
+
+    <!-- Mission Briefing & Lock Strings -->
+    <string name="briefing_duration">モード</string>
+    <string name="briefing_mode_label">モード</string>
+    <string name="briefing_mode_val">エンドレス</string>
+    <string name="result_time_survived">生存時間: %1$s</string>
+    <string name="briefing_best_score">ハイスコア</string>
+    <string name="briefing_stars">スター</string>
+    <string name="level_unlock_requirement">任務 %1$d をクリアして解放</string>
+    <string name="level_2_unlock_req">レベル1で1,200点以上を獲得してレベル2を解放</string>
+    <string name="level_3_unlock_req">レベル2で2,500点以上を獲得してレベル3を解放</string>
+    <string name="level_boss_unlock_req">レベル3で5,000点以上を獲得してBOSSレベルを解放</string>
+    <string name="level_unlock_short">任務 %1$d ★1</string>
+    <string name="menu_footer_features">スコア連動難易度 • 最大4倍コンボ • クラウド同期</string>
+    <string name="splash_tap_to_skip">画面をタップして進む</string>
+    <string name="splash_content_desc">バン・パトゥ コンプライアンス忍者 フラッシュスクリーン</string>
+    <string name="splash_corporate_desc">東京海上保険グループ - PT Tokio Marine Indonesia デジタル戦略部門提供</string>
+
+    <!-- Enhanced Rules & Mission UI Strings -->
+    <string name="rules_tab_all">すべて</string>
+    <string name="rules_tab_violations">違反行為</string>
+    <string name="rules_tab_legitimate">正規手続き</string>
+    <string name="rules_tab_traps">罠・誤報</string>
+    <string name="rules_tab_bonus">ボーナス</string>
+    <string name="rules_directive_slice_title">斬る</string>
+    <string name="rules_directive_slice_sub">+10点 × コンボ</string>
+    <string name="rules_directive_protect_title">守る</string>
+    <string name="rules_directive_protect_sub">誤切断でライフ-1</string>
+    <string name="rules_directive_trap_title">回避</string>
+    <string name="rules_directive_trap_sub">切断で-10点減点</string>
+    <string name="rules_directive_bonus_title">獲得</string>
+    <string name="rules_directive_bonus_sub">ライフ+1回復 &amp; +25点</string>
+    <string name="rules_ninja_tip_label">バン・パトゥ直伝の心得</string>
+    <string name="rules_tap_details_hint">タップして詳細プロファイルを確認</string>
+    <string name="mission_sector_label">セクター %1$d</string>
+    <string name="mission_boss_badge">最終セクター</string>
+    <string name="mission_targets_label">対象となる違反行為</string>
+    <string name="mission_star_thresholds">スター獲得目標</string>
+    <string name="mission_total_stars">スター</string>
+    <string name="mission_tap_to_deploy">スタート</string>
+    <string name="mission_select_prompt">作戦セクターを選択してください</string>
+
+    <!-- Comic Strings -->
+    <string name="menu_trailer_button">予告編</string>
+    <string name="menu_comic_button">コミック</string>
+    <string name="menu_comic_title">トリ: コンプライアンス忍者</string>
+    <string name="comic_episode_counter">第 %1$d 話 / 全 %2$d 話</string>
+    <string name="comic_drag_hint">左右にスワイプしてエピソードを閲覧</string>
+    <string name="comic_close">閉じる</string>
+    <string name="comic_ep1_title">贈収賄の危険</string>
+    <string name="comic_ep2_title">危険な裏ルート</string>
+    <string name="comic_ep3_title">お礼金の罠</string>
+    <string name="comic_ep4_title">甘い誘惑のスポンサー</string>
+    <string name="comic_ep5_title">予算操作の末路</string>
+
+    <!-- Forgot Password Strings -->
+    <string name="auth_reset_password_title">パスワード再設定</string>
+    <string name="auth_reset_password_subtitle">登録済みのユーザー名を入力し、新しいパスワードを設定してください。</string>
+    <string name="auth_new_password_label">新しいパスワード</string>
+    <string name="auth_new_password_placeholder">新しいパスワードを入力</string>
+    <string name="auth_confirm_password_label">パスワードの確認</string>
+    <string name="auth_confirm_password_placeholder">もう一度パスワードを入力</string>
+    <string name="auth_reset_password_button">パスワードを再設定</string>
+    <string name="auth_reset_password_success">パスワードを更新しました！新しいパスワードでログインできます。</string>
+    <string name="auth_error_passwords_dont_match">パスワードが一致しません</string>
+    <string name="auth_error_user_not_found">ユーザー名「%1$s」は見つかりませんでした</string>
+    <string name="auth_error_password_too_short">パスワードは4文字以上で設定してください</string>
+    <string name="auth_cancel">キャンセル</string>
+
+    <!-- Gameplay Rules Card & Dialog Strings -->
+    <string name="rules_action_slice">⚔️ 斬る</string>
+    <string name="rules_action_protect">🛡️ 守る</string>
+    <string name="rules_action_trap">⚠️ 罠</string>
+    <string name="rules_action_bonus">💎 ボーナス</string>
+
+    <string name="rules_card_point_violations">+10点 × コンボ</string>
+    <string name="rules_card_point_legitimate">誤切断でライフ-1</string>
+    <string name="rules_card_point_traps">誤切断で-10点減点</string>
+    <string name="rules_card_point_bonus">ライフ+1回復 &amp; +25点</string>
+
+    <string name="rules_dialog_directive_violations">⚔️ 一刀両断せよ！</string>
+    <string name="rules_dialog_desc_violations">画面下へ落ちる前に即座に斬り捨ててください。斬ると得点とコンボが加算されます。</string>
+    <string name="rules_dialog_directive_legitimate">🛡️ 守れ！絶対に斬るな！</string>
+    <string name="rules_dialog_desc_legitimate">正規の公的文書はそのまま通過させてください。誤って斬ると規律違反となりライフが1減少します！</string>
+    <string name="rules_dialog_directive_traps">⚠️ 罠だ！手を出すな！</string>
+    <string name="rules_dialog_desc_traps">根拠のない噂や囮です。誤って斬ると10点減点され、コンボがリセットされます。</string>
+    <string name="rules_dialog_directive_bonus">💎 黄金シールド！必ず獲得せよ！</string>
+    <string name="rules_dialog_desc_bonus">稀に出現する黄金シールドを斬ると、ライフが+1回復（最大4）し、+25点のボーナスを獲得できます！</string>
+
+    <string name="rules_dialog_section_game_rules">ゲームアリーナ規則:</string>
+    <string name="rules_dialog_section_governance">コンプライアンスの背景:</string>
+
+    <string name="rules_tip_violations">安全ゾーン内で集中して一撃を加えよ。画面外へ違反を逃がしてはならない！</string>
+    <string name="rules_tip_legitimate">公式の承認印や青色アイコンを合図に見分けよ。慌ててスワイプしてはならない！</string>
+    <string name="rules_tip_traps">罠アイテムは違反品と紛らわしく出現する。切断する前に慎重に見極めよ！</string>
+    <string name="rules_tip_bonus">黄金シールドは極めて貴重だ。最優先で獲得して業務継続時間を延ばせ！</string>
+    <string name="rules_dialog_close">了解</string>
+    <string name="rules_items_count">%1$d 項目</string>
+    <string name="menu_slice_mission_banner">違反を一刀両断</string>
+</resources>

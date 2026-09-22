@@ -1,0 +1,462 @@
+<resources>
+    <string name="app_name">BangPatuh</string>
+    <string name="game_tagline">Corporate Integrity Arcade</string>
+    <string name="start_shift_button">Start</string>
+    <string name="how_to_play">HOW TO PLAY</string>
+    <string name="high_score_label">HIGH SCORE</string>
+    <string name="legend_title">Compliance Rules</string>
+    <string name="legend_violations_header">SLICE (Violations):</string>
+    <string name="legend_violations_desc">Swipe through illicit practices to neutralize risks and earn combo points.</string>
+    <string name="legend_legitimate_header">AVOID (Legitimate Procedures):</string>
+    <string name="legend_legitimate_desc">Do NOT slice valid records. Damaging legitimate procedures costs 1 life.</string>
+    <string name="legend_shield_header">BONUS (Compliance Shield):</string>
+    <string name="legend_shield_desc">Slice rare golden shields to recover +1 life (max 4) and bonus points.</string>
+    <string name="legend_miss_penalty">Missed violation alert: Letting any violation escape off-screen costs 1 life!</string>
+
+    <!-- HUD Strings -->
+    <string name="hud_score">SCORE</string>
+    <string name="hud_time">TIME</string>
+    <string name="hud_combo">COMBO</string>
+    <string name="hud_paused">PAUSED</string>
+    <string name="hud_resume">RESUME</string>
+    <string name="hud_restart">RETRY</string>
+    <string name="hud_exit">EXIT</string>
+
+    <!-- Feedback alerts -->
+    <string name="alert_wrong_slice_title">WRONG SLICE!</string>
+    <string name="alert_wrong_slice_msg">Damaged legitimate procedure: %1$s</string>
+    <string name="alert_missed_violation">VIOLATION ESCAPED! Penalty: -1 Life</string>
+    <string name="alert_shield_gained">+1 LIFE! Compliance Shield Secured!</string>
+
+    <!-- Result Screen -->
+    <string name="result_title">SHIFT REPORT</string>
+    <string name="result_new_high_score">NEW HIGH SCORE!</string>
+    <string name="result_final_score">FINAL SCORE</string>
+    <string name="result_final_score_label">FINAL SCORE</string>
+    <string name="result_rank_label">OFFICER RANK</string>
+    <string name="result_rank_prefix">OFFICER RANK</string>
+    <string name="result_recap_title">COMPLIANCE DEBRIEF</string>
+    <string name="result_shift_debrief">COMPLIANCE DEBRIEF</string>
+    <string name="result_recap_heading">VIOLATIONS NEUTRALIZED</string>
+    <string name="result_recap_subtitle">Violations sliced and neutralized during your shift:</string>
+    <string name="result_recap_none_sliced">No violations sliced this round. Study the categories below and stay sharp!</string>
+    <string name="result_recap_empty">No violations sliced this round. Study the categories below and stay sharp!</string>
+    <string name="result_play_again">PLAY AGAIN</string>
+    <string name="result_main_menu">MAIN MENU</string>
+    <string name="result_times_neutralized">%1$d sliced</string>
+    <string name="result_neutralized_suffix">neutralized</string>
+
+    <!-- Menu & HUD aliases -->
+    <string name="menu_title">Compliance Ninja</string>
+    <string name="menu_subtitle">Bang Patuh</string>
+    <string name="menu_start_shift">Start Shift</string>
+    <string name="menu_compliance_slicer">COMPLIANCE NINJA</string>
+    <string name="menu_compliance_ninja">COMPLIANCE NINJA</string>
+    <string name="short_title_slice">SLICE</string>
+    <string name="short_title_protect">PROTECT</string>
+    <string name="short_title_avoid">AVOID</string>
+    <string name="short_title_collect">COLLECT</string>
+    <string name="menu_slice_violations_header">SLICE — Violations</string>
+    <string name="menu_avoid_legitimate_header">AVOID — Traps</string>
+    <string name="menu_protect_legitimate_header">PROTECT — Legitimate</string>
+    <string name="menu_collect_bonus_header">COLLECT — Bonus</string>
+    <string name="menu_drag_rules_hint">← Drag to view all 4 directives →</string>
+    <string name="menu_feature_slow_mo_title">Cinematic Slow-Mo</string>
+    <string name="menu_feature_slow_mo_desc">Big combos feel legendary</string>
+    <string name="menu_feature_slice_title">Slice Violations</string>
+    <string name="menu_feature_slice_desc">Protect integrity. Earn high scores.</string>
+    <string name="menu_feature_ethical_title">Stay Sharp Stay Ethical</string>
+    <string name="menu_feature_ethical_desc">Every decision matters.</string>
+    <string name="result_shift_recap">Your Shift Recap</string>
+    <string name="rank_senior_officer">Senior Compliance Officer</string>
+    <string name="menu_high_score_label">HIGH SCORE</string>
+    <string name="menu_how_to_play">RULES</string>
+    <string name="menu_glossary">Rules</string>
+    <string name="menu_leaderboard">Rankings</string>
+    <string name="menu_ask_me">Ask Me</string>
+    <string name="menu_watch_trailer">Trailer</string>
+    <string name="menu_game_trailer_title">Game Trailer</string>
+    <string name="menu_game_trailer_subtitle">Watch Bang Patuh in action</string>
+    <string name="trailer_close">Close</string>
+    <string name="trailer_replay">Replay</string>
+    <string name="trailer_play">Play</string>
+    <string name="trailer_pause">Pause</string>
+    <string name="trailer_mute">Mute</string>
+    <string name="trailer_unmute">Unmute</string>
+    <string name="chatbot_title">Compliance AI Assistant</string>
+    <string name="chatbot_subtitle">Tokio Marine • Online</string>
+    <string name="chatbot_close">Close</string>
+    <string name="chatbot_reload">Reload</string>
+    <string name="chatbot_loading">Connecting to Compliance Assistant...</string>
+    <string name="chatbot_error_title">Connection Error</string>
+    <string name="chatbot_error_retry">Retry Connection</string>
+    <string name="menu_ai_assistant">AI Assistant</string>
+    <string name="gameplay_ready">Ready...</string>
+    <string name="gameplay_game_over">GAME OVER</string>
+    <string name="hud_score_label">SCORE</string>
+    <string name="hud_timer_label">TIME</string>
+    <string name="dialog_paused_title">PAUSED</string>
+    <string name="dialog_resume">RESUME</string>
+    <string name="dialog_restart">RETRY</string>
+    <string name="dialog_quit_to_menu">EXIT TO MENU</string>
+
+    <!-- Ranks -->
+    <string name="rank_intern">Compliance Intern</string>
+    <string name="rank_auditor">Junior Auditor</string>
+    <string name="rank_officer">Compliance Officer</string>
+    <string name="rank_risk_lead">Senior Risk Lead</string>
+    <string name="rank_director">Chief Compliance Director</string>
+
+    <!-- Category Names -->
+    <string name="category_violation">Violation</string>
+    <string name="category_trap">Trap</string>
+    <string name="category_bonus">Bonus</string>
+    <string name="category_legit">Legitimate</string>
+
+    <string name="cat_bribery">Bribery</string>
+    <string name="cat_fraud">Fraud</string>
+    <string name="cat_money_laundering">Money Laundering</string>
+    <string name="cat_data_breach">Data Breach</string>
+    <string name="cat_systemic_corruption">Systemic Corruption</string>
+    <string name="cat_official_document">Official Document</string>
+    <string name="cat_verified_approval">Verified Approval</string>
+    <string name="cat_valid_partnership">Valid Partnership</string>
+    <string name="cat_certification">Certification</string>
+    <string name="cat_verified_invoice">Verified Invoice</string>
+    <string name="cat_shield">Compliance Shield</string>
+    <string name="cat_bonus_corruptor">Corruptor</string>
+
+    <!-- Traps (Decoys - Avoid Slicing) -->
+    <string name="cat_false_alarm">False Alarm</string>
+    <string name="cat_unverified_rumor">Unverified Rumor</string>
+    <string name="cat_honest_mistake">Honest Mistake</string>
+
+    <!-- Category Explanations (Compliance Value Reinforcement) -->
+    <string name="exp_bribery">Law No. 20/2001 on Corruption Eradication: Giving or receiving bribes/gratuities violates integrity and anti-corruption statutory provisions.</string>
+    <string name="exp_fraud">Manipulating corporate records, forging signatures, or fictitious bookkeeping damages organizational truth and integrity.</string>
+    <string name="exp_money_laundering">AML-CFT Regulations (Anti-Money Laundering &amp; Countering Financing of Terrorism): Structuring suspicious transactions to disguise illicit proceeds.</string>
+    <string name="exp_data_breach">Law No. 27/2022 on Personal Data Protection: Unauthorized disclosure of confidential or personal data violates privacy laws.</string>
+    <string name="exp_systemic_corruption">Deeply entrenched abuse of entrusted power threatens institutional integrity and creates severe corporate criminal liability.</string>
+    <string name="exp_official_document">Authorized corporate records must be preserved and processed through designated compliance governance channels.</string>
+    <string name="exp_verified_approval">Proper dual-control sign-offs and management approvals ensure accountability and checks across all business decisions.</string>
+    <string name="exp_valid_partnership">Vetted third-party counterparties who pass rigorous anti-corruption due diligence are legitimate business partners.</string>
+    <string name="exp_certification">Industry and regulatory certifications validate verified operational adherence to international safety and ethical benchmarks.</string>
+    <string name="exp_verified_invoice">Accurate invoices matched to legitimate purchase orders safeguard financial integrity against fraudulent billing.</string>
+    <string name="exp_shield">Proactive risk vigilance and internal controls act as a corporate shield against reputational damage and regulatory penalties.</string>
+    <string name="exp_bonus_corruptor">Special Freeze Bonus! Freezes the game for 5 seconds: Slice freely as many times as you can to seize stolen funds and earn high bonus points!</string>
+    <string name="exp_false_alarm">An unconfirmed security tip that turned out to be baseless. Acting hastily without verification wastes corporate resources.</string>
+    <string name="exp_unverified_rumor">Office gossip lacking factual evidence. Professional compliance requires documented proof, not speculative hearsay.</string>
+    <string name="exp_honest_mistake">An accidental clerical typo or formatting error. Human mistakes require guidance and coaching, not criminal sanction.</string>
+
+    <!-- Trap Alerts & Scoring -->
+    <string name="alert_trap_sliced">TRAP SLICED! -10 PTS (Unverified Situation)</string>
+    <string name="freeze_bonus_title">FREEZE BONUS! 5 SECONDS</string>
+    <string name="freeze_bonus_subtitle">Slice as much as you can to seize bonus score!</string>
+    <string name="freeze_bonus_hud_title">❄️ FREEZE BONUS! ❄️</string>
+    <string name="freeze_bonus_corruptor_sub">Slash Corruptor Freely! %1$d Slashes (+%2$d Points)</string>
+    <string name="freeze_bonus_complete">FREEZE OVER! +%1$d PTS (%2$d Slices)</string>
+
+    <!-- Glossary Screen -->
+    <string name="glossary_title">Gameplay Rules</string>
+    <string name="glossary_subtitle">Field Identification &amp; Rulebook</string>
+    <string name="glossary_section_violations">Violations (Slice These)</string>
+    <string name="glossary_desc_violations">Neutralize these active risks immediately. Slicing awards +10 points multiplied by your combo streak.</string>
+    <string name="glossary_section_legitimate">Legitimate Procedures (Do NOT Slice)</string>
+    <string name="glossary_desc_legitimate">Approved business processes and governance records. Slicing these damages integrity and costs 1 life.</string>
+    <string name="glossary_section_traps">Traps (Avoid Slicing)</string>
+    <string name="glossary_desc_traps">Decoys resembling violations. Do not act on unverified suspicion! Slicing penalizes -10 points and resets combo.</string>
+    <string name="glossary_section_bonus">Bonus (Compliance Shield)</string>
+    <string name="glossary_desc_bonus">Rare golden shields. Slicing recovers +1 life (max 4) and awards bonus score.</string>
+
+    <!-- Auth (Login / Register) -->
+    <string name="auth_title">Compliance Ninja</string>
+    <string name="auth_subtitle">Officer Authentication Terminal</string>
+    <string name="auth_welcome_back">Welcome Back, Ninja!</string>
+    <string name="auth_welcome_subtitle">Continue your journey to build a more compliant tomorrow.</string>
+    <string name="auth_register_welcome">Join the Force, Ninja!</string>
+    <string name="auth_register_welcome_subtitle">Create your officer credentials to start protecting the company.</string>
+    <string name="auth_login_tab">Log In</string>
+    <string name="auth_register_tab">Register</string>
+    <string name="auth_username_label">Officer Username</string>
+    <string name="auth_username_placeholder">Enter officer username</string>
+    <string name="auth_username_hint">Max 10 characters (Letters &amp; Numbers only)</string>
+    <string name="auth_error_username_invalid">Username must be 3-10 characters (letters and numbers only)</string>
+    <string name="auth_password_label">Security Password</string>
+    <string name="auth_password_placeholder">Enter security password</string>
+    <string name="auth_remember_me">Remember me</string>
+    <string name="auth_forgot_password">Forgot password?</string>
+    <string name="auth_login_btn">LOG IN</string>
+    <string name="auth_register_btn">REGISTER</string>
+    <string name="auth_or_continue_with">Or continue with</string>
+    <string name="auth_dont_have_account">Don\'t have an account?</string>
+    <string name="auth_register_now">Register now →</string>
+    <string name="auth_already_have_account">Already have an account?</string>
+    <string name="auth_login_now">Log in →</string>
+    <string name="auth_error_empty_fields">Username and password cannot be empty</string>
+    <string name="auth_error_user_taken">Username already registered. Please choose another.</string>
+    <string name="auth_error_username_taken">Username already taken, please choose another</string>
+    <string name="auth_error_invalid_credentials">Incorrect username or password</string>
+    <string name="auth_logout_btn">Log Out</string>
+    <string name="auth_logout">Log Out</string>
+    <string name="auth_logged_in_as">Officer: %1$s</string>
+    <string name="auth_toggle_to_register">Don\'t have an account? Register</string>
+    <string name="auth_toggle_to_login">Already have an account? Log in</string>
+    <string name="auth_bang_patuh_title">BANG PATUH</string>
+    <string name="auth_bang_patuh_subtitle">Compliance Ninja</string>
+    <string name="auth_slogan">Uphold Integrity for a Better Future</string>
+
+    <!-- Language & Audio Controls -->
+    <string name="language_toggle">ID | EN</string>
+    <string name="audio_volume">Audio</string>
+    <string name="audio_mute">Mute Audio</string>
+    <string name="audio_unmute">Unmute Audio</string>
+
+    <!-- Level Select & Difficulty -->
+    <string name="level_select_title">Mission</string>
+    <string name="level_select_subtitle">Select Investigation Tier</string>
+    <string name="level_slice_hint">Swipe across icon to deploy!</string>
+    <string name="level_locked_notice">Locked: Clear previous tier to unlock</string>
+    <string name="level_info_title">Mission Briefing</string>
+    <string name="level_info_tap_instruction">Tap to inspect • Swipe across to deploy</string>
+    <string name="popup_triple_slice">TRIPLE SLICE! x2</string>
+    <string name="popup_multi_slice">MULTI-SLICE! x2</string>
+    <string name="difficulty_label">Difficulty:</string>
+    <string name="difficulty_normal">Normal</string>
+    <string name="difficulty_hard">Hard (1.25x Pts)</string>
+    <string name="level_tier_1">Intern</string>
+    <string name="level_tier_2">Staff</string>
+    <string name="level_tier_3">Manager</string>
+    <string name="level_tier_boss">Chief</string>
+
+    <string name="rank_chief_compliance_ninja">Chief Compliance Ninja</string>
+    <string name="rank_senior_risk_specialist">Senior Risk Specialist</string>
+    <string name="rank_lead_investigator">Lead Investigator</string>
+    <string name="rank_junior_auditor">Junior Auditor</string>
+    <string name="rank_compliance_intern">Compliance Intern</string>
+
+    <string name="level_number">LEVEL %1$d</string>
+    <string name="level1_name">Internal Controls</string>
+    <string name="level1_desc">Learn to identify bribery, fraud, and legitimate approvals under controlled conditions.</string>
+    <string name="level2_name">Claims &amp; Fraud</string>
+    <string name="level2_desc">Monitor money laundering risks while avoiding false alarms and unverified rumors.</string>
+    <string name="level3_name">Data &amp; Privacy</string>
+    <string name="level3_desc">High-speed data breach threats and tricky honest mistakes in fast-moving audits.</string>
+    <string name="level4_name">Financial Crimes</string>
+    <string name="level4_desc">Root out deeply entrenched systemic corruption amid multi-wave regulatory hazards.</string>
+    <string name="level_best_score">Best: %1$d</string>
+    <string name="level_play_btn">INVESTIGATE</string>
+
+    <!-- Leaderboard & Stats -->
+    <string name="leaderboard_title">Officer Rankings</string>
+    <string name="leaderboard_tab_global">Global Top 100</string>
+    <string name="leaderboard_tab_my_stats">My Stats</string>
+    <string name="tab_global_leaderboard">Global Top 100</string>
+    <string name="tab_my_stats">My Stats</string>
+    <string name="leaderboard_rank_header">#</string>
+    <string name="leaderboard_user_header">OFFICER</string>
+    <string name="leaderboard_score_header">SCORE</string>
+    <string name="leaderboard_level_header">LEVEL</string>
+    <string name="leaderboard_diff_header">MODE</string>
+    <string name="leaderboard_server_offline">Server Offline</string>
+    <string name="leaderboard_offline_notice">Server Offline — Showing cached results</string>
+    <string name="leaderboard_offline_banner">Server Offline — Showing cached results</string>
+    <string name="leaderboard_refresh">REFRESH</string>
+    <string name="leaderboard_empty">No rankings recorded yet. Be the first to play!</string>
+    <string name="stats_overall_best">Overall Personal Best</string>
+    <string name="stats_personal_best">Personal Best</string>
+    <string name="stats_best_score">Best Score</string>
+    <string name="stats_achieved_in">Achieved in Level %1$d (%2$s)</string>
+    <string name="stats_global_rank">Global Standing: %1$s</string>
+    <string name="stats_rank_in_top100">Rank #%1$d of 100</string>
+    <string name="stats_global_rank_top100">Rank #%1$d of 100</string>
+    <string name="stats_outside_top100">Outside Top 100 — keep playing!</string>
+    <string name="stats_global_rank_outside">Outside Top 100 — keep playing!</string>
+    <string name="stats_lifetime_heading">Career Performance</string>
+    <string name="stats_career_totals">Career Performance</string>
+    <string name="stats_games_played">Shifts Completed</string>
+    <string name="stats_violations_sliced">Violations Neutralized</string>
+    <string name="stats_traps_avoided">Traps Avoided</string>
+    <string name="stats_traps_sliced">Traps Mistakenly Sliced</string>
+    <string name="stats_best_combo">Highest Combo Streak</string>
+    <string name="stats_best_combo_streak">Highest Combo Streak</string>
+    <string name="stats_level_table_heading">Level Mastery</string>
+    <string name="stats_level_mastery">Level Mastery</string>
+    <string name="stats_table_level">Level</string>
+    <string name="stats_table_best">Best Score</string>
+    <string name="stats_table_stars">Stars</string>
+
+    <!-- Result Screen Debrief Additions -->
+    <string name="result_traps_heading">TRAP RECOGNITION</string>
+    <string name="result_traps_avoided_label">Correctly Avoided: %1$d</string>
+    <string name="result_traps_sliced_label">Mistakenly Sliced: %1$d (-10 pts each)</string>
+    <string name="result_level_label">Level %1$d • %2$s Mode</string>
+    <string name="result_next_level">NEXT MISSION</string>
+    <string name="debug_overlay_label">Safe Zone Overlay</string>
+
+    <!-- Glossary Dialog Strings -->
+    <string name="glossary_dialog_got_it">Got it</string>
+    <string name="glossary_action_slice">SLICE THIS</string>
+    <string name="glossary_action_avoid">AVOID (DO NOT SLICE)</string>
+    <string name="glossary_action_trap">AVOID (TRAP)</string>
+    <string name="glossary_action_collect">COLLECT (BONUS)</string>
+    <string name="glossary_label_category">Category</string>
+    <string name="glossary_label_gameplay_rule">Gameplay Action</string>
+    <string name="glossary_label_compliance_rule">Compliance Background</string>
+    <!-- Floating Feedback Strings -->
+    <string name="popup_points_plus">+%1$d PTS</string>
+    <string name="popup_trap_penalty">TRAP! -10 PTS</string>
+    <string name="popup_streak_break">STREAK BREAK!</string>
+    <string name="popup_wrong_target">WRONG TARGET! -1 LIFE</string>
+    <string name="popup_shield_bonus">+1 LIFE!</string>
+    <string name="popup_combo_format">%1$dx COMBO!</string>
+
+    <!-- Mission Select Subtitles & Actions -->
+    <string name="level_slice_to_deploy">Swipe to Deploy</string>
+    <string name="level_tap_for_info">Tap for Briefing</string>
+    <string name="level_locked_badge">LOCKED</string>
+    <string name="level_status_active">ACTIVE</string>
+    <string name="level1_subtitle">Foundational approvals &amp; anti-bribery</string>
+    <string name="level2_subtitle">Financial claims &amp; AML red flags</string>
+    <string name="level3_subtitle">Data breaches &amp; fast-paced privacy</string>
+    <string name="level4_subtitle">Systemic corruption &amp; crisis mitigation</string>
+
+    <!-- Profile Screen Strings -->
+    <string name="profile_title">Officer Profile</string>
+    <string name="profile_badge_id">Officer ID: #%1$s</string>
+    <string name="profile_avatar_title">Human Avatar</string>
+    <string name="profile_close">Close</string>
+
+    <!-- Personal Stats Charts & History Strings -->
+    <string name="stats_chart_category_breakdown">Violation Slices by Category</string>
+    <string name="stats_chart_score_progression">Score Progression (Recent Shifts)</string>
+    <string name="stats_average_score">Average Score</string>
+    <string name="stats_accuracy_rate">Accuracy Rate</string>
+    <string name="stats_recent_shifts_title">Shift History Log</string>
+    <string name="stats_no_history">No shifts completed yet. Deploy on a mission to see your graph!</string>
+    <string name="stats_session_date">Date</string>
+    <string name="stats_session_score">Score</string>
+    <string name="stats_session_mission">Mission</string>
+    <string name="stats_session_accuracy">Accuracy</string>
+    <string name="stats_legend_no_data">No violations sliced yet</string>
+
+    <!-- Enriched Categories & Explanations -->
+    <string name="cat_insider_trading">Insider Trading</string>
+    <string name="exp_insider_trading">Trading securities based on non-public material information compromises market fairness.</string>
+    <string name="cat_conflict_of_interest">Conflict of Interest</string>
+    <string name="exp_conflict_of_interest">Using official position for personal or familial gain undermines objective governance.</string>
+    <string name="cat_embezzlement">Embezzlement</string>
+    <string name="exp_embezzlement">Misappropriating entrusted company assets for personal gain is a severe criminal offense.</string>
+    <string name="cat_compliance_audit">Compliance Audit</string>
+    <string name="exp_compliance_audit">Independent verification ensuring operational adherence to regulatory benchmarks.</string>
+    <string name="cat_ethics_training">Ethics Training</string>
+    <string name="exp_ethics_training">Continuous ethics development empowering staff to prevent integrity violations.</string>
+    <string name="cat_transparency_report">Transparency Report</string>
+    <string name="exp_transparency_report">Public reporting of governance performance fostering institutional accountability.</string>
+    <string name="cat_phishing_bait">Phishing Bait</string>
+    <string name="exp_phishing_bait">A simulation test designed to assess alertness. Always verify before reporting a breach.</string>
+    <string name="cat_misfiled_memo">Misfiled Memo</string>
+    <string name="exp_misfiled_memo">An accidental document misplacement. Needs simple re-archiving, not disciplinary escalation.</string>
+    <string name="cat_whistleblower">Whistleblower Hotline</string>
+    <string name="exp_whistleblower">Confidential reporting channel safeguarding whistleblowers and unmasking internal risks.</string>
+    <string name="cat_star_auditor">Star Auditor</string>
+    <string name="exp_star_auditor">Honorary commendation recognizing exemplary dedication to institutional integrity.</string>
+
+    <!-- Mission Briefing & Lock Strings -->
+    <string name="briefing_duration">Mode</string>
+    <string name="briefing_mode_label">Mode</string>
+    <string name="briefing_mode_val">Endless</string>
+    <string name="result_time_survived">SURVIVED: %1$s</string>
+    <string name="briefing_best_score">Best Score</string>
+    <string name="briefing_stars">Stars</string>
+    <string name="level_unlock_requirement">Complete Mission %1$d to unlock</string>
+    <string name="level_2_unlock_req">Score min. 1,200 on Level 1 to unlock Level 2</string>
+    <string name="level_3_unlock_req">Score min. 2,500 on Level 2 to unlock Level 3</string>
+    <string name="level_boss_unlock_req">Score min. 5,000 on Level 3 to unlock BOSS Level</string>
+    <string name="level_unlock_short">Mission %1$d ★1</string>
+    <string name="menu_footer_features">Score-Based Difficulty • Combos up to 4x • Cloud Sync</string>
+    <string name="splash_tap_to_skip">Tap anywhere to continue</string>
+    <string name="splash_content_desc">Bang Patuh Compliance Ninja Flash Screen</string>
+    <string name="splash_corporate_desc">Tokio Marine Insurance Group - Presented by Digital Strategy PT Tokio Marine Indonesia</string>
+
+    <!-- Enhanced Rules & Mission UI Strings -->
+    <string name="rules_tab_all">All</string>
+    <string name="rules_tab_violations">Violations</string>
+    <string name="rules_tab_legitimate">Official</string>
+    <string name="rules_tab_traps">Traps</string>
+    <string name="rules_tab_bonus">Bonus</string>
+    <string name="rules_directive_slice_title">SLICE</string>
+    <string name="rules_directive_slice_sub">+10 Pts × Combo</string>
+    <string name="rules_directive_protect_title">PROTECT</string>
+    <string name="rules_directive_protect_sub">-1 Life Penalty</string>
+    <string name="rules_directive_trap_title">AVOID</string>
+    <string name="rules_directive_trap_sub">-10 Pts Penalty</string>
+    <string name="rules_directive_bonus_title">COLLECT</string>
+    <string name="rules_directive_bonus_sub">+1 Life &amp; +25 Pts</string>
+    <string name="rules_ninja_tip_label">Bang Patuh Pro Tip</string>
+    <string name="rules_tap_details_hint">Tap to inspect tactical profile</string>
+    <string name="mission_sector_label">SECTOR %1$d</string>
+    <string name="mission_boss_badge">FINAL SECTOR</string>
+    <string name="mission_targets_label">Target Violations</string>
+    <string name="mission_star_thresholds">Star Targets</string>
+    <string name="mission_total_stars">Stars</string>
+    <string name="mission_tap_to_deploy">START</string>
+    <string name="mission_select_prompt">Select an operational sector</string>
+
+    <!-- Comic Strings -->
+    <string name="menu_trailer_button">Trailer</string>
+    <string name="menu_comic_button">Comic</string>
+    <string name="menu_comic_title">Tori: The Compliance Ninja</string>
+    <string name="comic_episode_counter">Episode %1$d / %2$d</string>
+    <string name="comic_drag_hint">Drag or swipe left/right to view episodes</string>
+    <string name="comic_close">Close</string>
+    <string name="comic_ep1_title">Bahaya Gratifikasi</string>
+    <string name="comic_ep2_title">Jalur Cepat</string>
+    <string name="comic_ep3_title">Uang Capek</string>
+    <string name="comic_ep4_title">Sponsor Sultan yang Bikin Deg-degan</string>
+    <string name="comic_ep5_title">Sulap Anggaran yang Berujung Penjara</string>
+
+    <!-- Forgot Password Strings -->
+    <string name="auth_reset_password_title">Reset Password</string>
+    <string name="auth_reset_password_subtitle">Enter your registered username and set a new password.</string>
+    <string name="auth_new_password_label">New Password</string>
+    <string name="auth_new_password_placeholder">Enter new password</string>
+    <string name="auth_confirm_password_label">Confirm Password</string>
+    <string name="auth_confirm_password_placeholder">Re-enter new password</string>
+    <string name="auth_reset_password_button">Reset Password</string>
+    <string name="auth_reset_password_success">Password updated successfully! You can now log in.</string>
+    <string name="auth_error_passwords_dont_match">Passwords do not match</string>
+    <string name="auth_error_user_not_found">Username \'%1$s\' not found</string>
+    <string name="auth_error_password_too_short">Password must be at least 4 characters</string>
+    <string name="auth_cancel">Cancel</string>
+
+    <!-- Gameplay Rules Card & Dialog Strings -->
+    <string name="rules_action_slice">⚔️ SLICE</string>
+    <string name="rules_action_protect">🛡️ PROTECT</string>
+    <string name="rules_action_trap">⚠️ TRAP</string>
+    <string name="rules_action_bonus">💎 BONUS</string>
+
+    <string name="rules_card_point_violations">+10 PTS × Combo</string>
+    <string name="rules_card_point_legitimate">-1 Life if sliced</string>
+    <string name="rules_card_point_traps">-10 Pts if sliced</string>
+    <string name="rules_card_point_bonus">+1 Life &amp; +25 Pts</string>
+
+    <string name="rules_dialog_directive_violations">⚔️ MUST SLASH!</string>
+    <string name="rules_dialog_desc_violations">Slash immediately before it falls past the screen. Slicing gives points and increases combo.</string>
+    <string name="rules_dialog_directive_legitimate">🛡️ PROTECT! DO NOT SLASH!</string>
+    <string name="rules_dialog_desc_legitimate">Let legitimate documents fall freely. Slicing legitimate documents breaches compliance and costs 1 LIFE!</string>
+    <string name="rules_dialog_directive_traps">⚠️ TRAP! AVOID SLICING!</string>
+    <string name="rules_dialog_desc_traps">This is unproven bait or a hoax. Slicing it inflicts a -10 POINTS PENALTY and resets combo.</string>
+    <string name="rules_dialog_directive_bonus">💎 GOLDEN SHIELD! CLAIM IT!</string>
+    <string name="rules_dialog_desc_bonus">Slice this rare golden shield to restore +1 LIFE (max 4) and gain +25 bonus points!</string>
+
+    <string name="rules_dialog_section_game_rules">GAME ARENA RULES:</string>
+    <string name="rules_dialog_section_governance">COMPLIANCE CONTEXT:</string>
+
+    <string name="rules_tip_violations">Focus your slash within the safe zone. Don\'t let violations escape below!</string>
+    <string name="rules_tip_legitimate">Look out for official seals or blue color. Don\'t panic swipe!</string>
+    <string name="rules_tip_traps">Trap items often appear close to violations. Inspect carefully before slicing!</string>
+    <string name="rules_tip_bonus">Golden shields are very valuable. Prioritize slicing them to extend your shift!</string>
+    <string name="rules_dialog_close">Understood</string>
+    <string name="rules_items_count">%1$d Items</string>
+    <string name="menu_slice_mission_banner">Slice Violations</string>
+</resources>

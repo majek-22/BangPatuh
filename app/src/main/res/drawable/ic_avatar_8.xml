@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Circle background -->
+    <path
+        android:fillColor="#3D3A2C"
+        android:pathData="M24,2a22,22 0 1,0 0,44a22,22 0 1,0 0,-44z" />
+    <!-- Head/Face -->
+    <path
+        android:fillColor="#D89D78"
+        android:pathData="M24,12a7,7 0 1,0 0,14a7,7 0 1,0 0,-14z" />
+    <!-- Cropped Dark Hair -->
+    <path
+        android:fillColor="#18181B"
+        android:pathData="M17,14c0,-5 3,-7 7,-7s7,2 7,7c-2,-2 -5,-2 -7,-2s-5,0 -7,2z" />
+    <!-- Neat Mustache -->
+    <path
+        android:fillColor="#18181B"
+        android:pathData="M20,22c1.5,-0.5 3,0.5 4,0.5s2.5,-1 4,-0.5c-1,1.5 -3,1.5 -4,1.5s-3,0 -4,-1.5z" />
+    <!-- Charcoal Suit & Gold Tie -->
+    <path
+        android:fillColor="#262626"
+        android:pathData="M11,42c0,-8 6,-13 13,-13s13,5 13,13z" />
+    <path
+        android:fillColor="#EAB308"
+        android:pathData="M23,26l2,0l1,7l-2,3l-2,-3z" />
+</vector>

@@ -1,0 +1,462 @@
+<resources>
+    <string name="app_name">BangPatuh</string>
+    <string name="game_tagline">Arkade Integritas Korporat</string>
+    <string name="start_shift_button">Mulai</string>
+    <string name="how_to_play">CARA BERMAIN</string>
+    <string name="high_score_label">SKOR TERTINGGI</string>
+    <string name="legend_title">Aturan Kepatuhan</string>
+    <string name="legend_violations_header">TEBAS (Pelanggaran):</string>
+    <string name="legend_violations_desc">Tebas praktik terlarang untuk menetralisir risiko dan kumpulkan poin kombo.</string>
+    <string name="legend_legitimate_header">HINDARI (Prosedur Sah):</string>
+    <string name="legend_legitimate_desc">JANGAN tebas catatan sah. Merusak prosedur sah mengurangi 1 nyawa.</string>
+    <string name="legend_shield_header">BONUS (Perisai Kepatuhan):</string>
+    <string name="legend_shield_desc">Tebas perisai emas langka untuk memulihkan +1 nyawa (maks 4) dan poin bonus.</string>
+    <string name="legend_miss_penalty">Peringatan lolos: Membiarkan pelanggaran jatuh keluar layar mengurangi 1 nyawa!</string>
+
+    <!-- HUD Strings -->
+    <string name="hud_score">SKOR</string>
+    <string name="hud_time">WAKTU</string>
+    <string name="hud_combo">KOMBO</string>
+    <string name="hud_paused">JEDA</string>
+    <string name="hud_resume">LANJUTKAN</string>
+    <string name="hud_restart">ULANGI</string>
+    <string name="hud_exit">KELUAR</string>
+
+    <!-- Feedback alerts -->
+    <string name="alert_wrong_slice_title">SALAH TEBAS!</string>
+    <string name="alert_wrong_slice_msg">Merusak prosedur yang sah: %1$s</string>
+    <string name="alert_missed_violation">PELANGGARAN LOLOS! Penalti: -1 Nyawa</string>
+    <string name="alert_shield_gained">+1 NYAWA! Perisai Kepatuhan Didapatkan!</string>
+
+    <!-- Result Screen -->
+    <string name="result_title">LAPORAN TUGAS</string>
+    <string name="result_new_high_score">REKOR SKOR BARU!</string>
+    <string name="result_final_score">SKOR AKHIR</string>
+    <string name="result_final_score_label">SKOR AKHIR</string>
+    <string name="result_rank_label">PANGKAT PETUGAS</string>
+    <string name="result_rank_prefix">PANGKAT PETUGAS</string>
+    <string name="result_recap_title">EVALUASI KEPATUHAN</string>
+    <string name="result_shift_debrief">EVALUASI KEPATUHAN</string>
+    <string name="result_recap_heading">PELANGGARAN DINETRALISIR</string>
+    <string name="result_recap_subtitle">Pelanggaran yang ditebas dan dinetralisir selama tugas Anda:</string>
+    <string name="result_recap_none_sliced">Tidak ada pelanggaran yang ditebas ronde ini. Pelajari kategori dan tetap waspada!</string>
+    <string name="result_recap_empty">Tidak ada pelanggaran yang ditebas ronde ini. Pelajari kategori dan tetap waspada!</string>
+    <string name="result_play_again">MAIN LAGI</string>
+    <string name="result_main_menu">MENU UTAMA</string>
+    <string name="result_times_neutralized">%1$d ditebas</string>
+    <string name="result_neutralized_suffix">dinetralisir</string>
+
+    <!-- Menu & HUD aliases -->
+    <string name="menu_title">Compliance Ninja</string>
+    <string name="menu_subtitle">Bang Patuh</string>
+    <string name="menu_start_shift">Mulai Tugas</string>
+    <string name="menu_compliance_slicer">COMPLIANCE NINJA</string>
+    <string name="menu_compliance_ninja">COMPLIANCE NINJA</string>
+   <string name="short_title_slice">TEBAS</string>
+    <string name="short_title_protect">LINDUNGI</string>
+    <string name="short_title_avoid">HINDARI</string>
+    <string name="short_title_collect">KUMPULKAN</string>
+    <string name="menu_slice_violations_header">TEBAS — Pelanggaran</string>
+    <string name="menu_avoid_legitimate_header">HINDARI — Jebakan</string>
+    <string name="menu_protect_legitimate_header">LINDUNGI — Sah</string>
+    <string name="menu_collect_bonus_header">KUMPULKAN — Bonus</string>
+    <string name="menu_drag_rules_hint">← Geser untuk 4 panduan kepatuhan →</string>
+    <string name="menu_feature_slow_mo_title">Slow-Mo Sinematik</string>
+    <string name="menu_feature_slow_mo_desc">Combo spektakuler dan epik</string>
+    <string name="menu_feature_slice_title">Tebas Pelanggaran</string>
+    <string name="menu_feature_slice_desc">Jaga integritas. Raih skor tinggi.</string>
+    <string name="menu_feature_ethical_title">Sigap &amp; Beretika</string>
+    <string name="menu_feature_ethical_desc">Setiap keputusan bermakna.</string>
+    <string name="result_shift_recap">Ringkasan Tugas Anda</string>
+    <string name="rank_senior_officer">Petugas Kepatuhan Senior</string>
+    <string name="menu_high_score_label">SKOR TERTINGGI</string>
+    <string name="menu_how_to_play">ATURAN</string>
+    <string name="menu_glossary">Aturan</string>
+    <string name="menu_leaderboard">Peringkat</string>
+    <string name="menu_ask_me">Ask Me</string>
+    <string name="menu_watch_trailer">Trailer</string>
+    <string name="menu_game_trailer_title">Trailer Game</string>
+    <string name="menu_game_trailer_subtitle">Tonton aksi Bang Patuh</string>
+    <string name="trailer_close">Tutup</string>
+    <string name="trailer_replay">Putar Ulang</string>
+    <string name="trailer_play">Putar</string>
+    <string name="trailer_pause">Jeda</string>
+    <string name="trailer_mute">Senyapkan</string>
+    <string name="trailer_unmute">Bunyikan</string>
+    <string name="chatbot_title">Asisten AI Kepatuhan</string>
+    <string name="chatbot_subtitle">Tokio Marine • Online</string>
+    <string name="chatbot_close">Tutup</string>
+    <string name="chatbot_reload">Muat Ulang</string>
+    <string name="chatbot_loading">Menghubungkan ke Asisten Kepatuhan...</string>
+    <string name="chatbot_error_title">Gagal Menghubungkan</string>
+    <string name="chatbot_error_retry">Coba Lagi</string>
+    <string name="menu_ai_assistant">Asisten AI</string>
+    <string name="gameplay_ready">Bersiap...</string>
+    <string name="gameplay_game_over">PERMAINAN SELESAI</string>
+    <string name="hud_score_label">SKOR</string>
+    <string name="hud_timer_label">WAKTU</string>
+    <string name="dialog_paused_title">JEDA</string>
+    <string name="dialog_resume">LANJUTKAN</string>
+    <string name="dialog_restart">ULANGI</string>
+    <string name="dialog_quit_to_menu">KELUAR KE MENU</string>
+
+    <!-- Ranks -->
+    <string name="rank_intern">Magang Kepatuhan</string>
+    <string name="rank_auditor">Auditor Muda</string>
+    <string name="rank_officer">Petugas Kepatuhan</string>
+    <string name="rank_risk_lead">Ketua Manajemen Risiko</string>
+    <string name="rank_director">Direktur Kepatuhan Utama</string>
+
+    <!-- Category Names -->
+    <string name="category_violation">Pelanggaran</string>
+    <string name="category_trap">Jebakan</string>
+    <string name="category_bonus">Bonus</string>
+    <string name="category_legit">Sah</string>
+
+    <string name="cat_bribery">Suap</string>
+    <string name="cat_fraud">Kecurangan (Fraud)</string>
+    <string name="cat_money_laundering">Pencucian Uang</string>
+    <string name="cat_data_breach">Kebocoran Data</string>
+    <string name="cat_systemic_corruption">Korupsi Sistemik</string>
+    <string name="cat_official_document">Dokumen Resmi</string>
+    <string name="cat_verified_approval">Persetujuan Terverifikasi</string>
+    <string name="cat_valid_partnership">Kemitraan Sah</string>
+    <string name="cat_certification">Sertifikasi</string>
+    <string name="cat_verified_invoice">Faktur Terverifikasi</string>
+    <string name="cat_shield">Perisai Kepatuhan</string>
+    <string name="cat_bonus_corruptor">Koruptor</string>
+
+    <!-- Traps (Decoys - Avoid Slicing) -->
+    <string name="cat_false_alarm">Alarm Palsu</string>
+    <string name="cat_unverified_rumor">Rumor Tak Terverifikasi</string>
+    <string name="cat_honest_mistake">Kekhilafan Administratif</string>
+
+    <!-- Category Explanations (Compliance Value Reinforcement) -->
+    <string name="exp_bribery">UU No. 20 Tahun 2001 Tentang Tindak Pidana Korupsi: Memberi atau menerima suap/gratifikasi melanggar integritas dan ketentuan hukum tindak pidana korupsi.</string>
+    <string name="exp_fraud">Manipulasi catatan perusahaan, pemalsuan tanda tangan, atau pembukuan fiktif merusak kebenaran dan integritas organisasi.</string>
+    <string name="exp_money_laundering">Regulasi APU-PPT (Anti Pencucian Uang dan Pencegahan Pendanaan Terorisme): Menata transaksi mencurigakan untuk menyamarkan asal dana kejahatan.</string>
+    <string name="exp_data_breach">UU No. 27 Tahun 2022 Tentang Pelindungan Data Pribadi: Membuka data rahasia/pribadi tanpa otorisasi sah melanggar hukum privasi.</string>
+    <string name="exp_systemic_corruption">Penyalahgunaan wewenang secara terstruktur dan terlembaga merusak integritas dan membawa pertanggungjawaban pidana berat.</string>
+    <string name="exp_official_document">Catatan resmi perusahaan harus dijaga dan diproses melalui saluran tata kelola kepatuhan yang sah.</string>
+    <string name="exp_verified_approval">Persetujuan ganda dan tanda tangan manajemen yang sah memastikan akuntabilitas atas setiap keputusan bisnis.</string>
+    <string name="exp_valid_partnership">Mitra pihak ketiga yang telah melalui uji tuntas (due diligence) anti-korupsi adalah rekanan bisnis yang sah.</string>
+    <string name="exp_certification">Sertifikasi industri membuktikan ketaatan operasional terhadap standar keselamatan dan etika internasional.</string>
+    <string name="exp_verified_invoice">Faktur sah yang cocok dengan pesanan pembelian (PO) menjaga integritas keuangan dari tagihan fiktif.</string>
+    <string name="exp_shield">Kewaspadaan risiko dan pengendalian internal proaktif berfungsi sebagai perisai dari kerugian reputasi dan denda hukum.</string>
+    <string name="exp_bonus_corruptor">Bonus Freeze Khusus! Freeze game selama 5 detik: Tebas bebas sebanyak-banyaknya untuk menyita uang rakyat menjadi skor bonus besar!</string>
+    <string name="exp_false_alarm">Laporan keamanan yang ternyata tidak berdasar. Bertindak terburu-buru tanpa verifikasi membuang sumber daya perusahaan.</string>
+    <string name="exp_unverified_rumor">Gosip kantor tanpa bukti faktual. Kepatuhan profesional membutuhkan bukti dokumen, bukan spekulasi kabar angin.</string>
+    <string name="exp_honest_mistake">Kekhilafan ketik atau kesalahan format yang tidak disengaja. Kesalahan manusia memerlukan bimbingan, bukan sanksi pidana.</string>
+
+    <!-- Trap Alerts & Scoring -->
+    <string name="alert_trap_sliced">JEBAKAN DITEBAS! -10 POIN (Situasi Belum Terverifikasi)</string>
+    <string name="freeze_bonus_title">FREEZE BONUS! 5 DETIK</string>
+    <string name="freeze_bonus_subtitle">Bebas tebas sebanyak-banyaknya untuk raih skor bonus!</string>
+    <string name="freeze_bonus_hud_title">❄️ BONUS BEKU! ❄️</string>
+    <string name="freeze_bonus_corruptor_sub">Tebas Koruptor Bebas! %1$d Tebasan (+%2$d Poin)</string>
+    <string name="freeze_bonus_complete">FREEZE SELESAI! +%1$d POIN (%2$d Tebasan)</string>
+
+    <!-- Glossary Screen -->
+    <string name="glossary_title">Aturan Permainan</string>
+    <string name="glossary_subtitle">Panduan Identifikasi &amp; Buku Aturan</string>
+    <string name="glossary_section_violations">Pelanggaran (Tebas Ini)</string>
+    <string name="glossary_desc_violations">Netralisir risiko aktif ini segera. Menebas memberikan +10 poin dikalikan kelipatan kombo Anda.</string>
+    <string name="glossary_section_legitimate">Prosedur Sah (JANGAN Ditebas)</string>
+    <string name="glossary_desc_legitimate">Proses bisnis dan catatan tata kelola yang sah. Menebas item ini merusak integritas dan mengurangi 1 nyawa.</string>
+    <string name="glossary_section_traps">Jebakan (Hindari Ditebas)</string>
+    <string name="glossary_desc_traps">Umpan yang mirip pelanggaran. Jangan bertindak atas kecurigaan tanpa bukti! Menebas mengurangi -10 poin dan mereset kombo.</string>
+    <string name="glossary_section_bonus">Bonus (Perisai Kepatuhan)</string>
+    <string name="glossary_desc_bonus">Perisai emas langka. Menebas memulihkan +1 nyawa (maks 4) dan memberikan poin bonus.</string>
+
+    <!-- Auth (Login / Register) -->
+    <string name="auth_title">Compliance Ninja</string>
+    <string name="auth_subtitle">Terminal Autentikasi Petugas</string>
+    <string name="auth_welcome_back">Selamat Datang, Ninja!</string>
+    <string name="auth_welcome_subtitle">Lanjutkan langkahmu mewujudkan masa depan yang berintegritas.</string>
+    <string name="auth_register_welcome">Bergabunglah, Ninja!</string>
+    <string name="auth_register_welcome_subtitle">Buat akun petugasmu untuk mulai melindungi integritas perusahaan.</string>
+    <string name="auth_login_tab">Masuk</string>
+    <string name="auth_register_tab">Daftar</string>
+    <string name="auth_username_label">Nama Pengguna Petugas</string>
+    <string name="auth_username_placeholder">Masukkan nama pengguna</string>
+    <string name="auth_username_hint">Maks. 10 karakter (Huruf &amp; Angka saja)</string>
+    <string name="auth_error_username_invalid">Username harus 3-10 karakter (hanya huruf dan angka)</string>
+    <string name="auth_password_label">Kata Sandi Keamanan</string>
+    <string name="auth_password_placeholder">Masukkan kata sandi</string>
+    <string name="auth_remember_me">Ingat saya</string>
+    <string name="auth_forgot_password">Lupa kata sandi?</string>
+    <string name="auth_login_btn">LOG IN</string>
+    <string name="auth_register_btn">DAFTAR</string>
+    <string name="auth_or_continue_with">Atau lanjutkan dengan</string>
+    <string name="auth_dont_have_account">Belum punya akun?</string>
+    <string name="auth_register_now">Daftar sekarang →</string>
+    <string name="auth_already_have_account">Sudah punya akun?</string>
+    <string name="auth_login_now">Masuk sekarang →</string>
+    <string name="auth_error_empty_fields">Nama pengguna dan kata sandi tidak boleh kosong</string>
+    <string name="auth_error_user_taken">Nama pengguna sudah terdaftar. Silakan pilih yang lain.</string>
+    <string name="auth_error_username_taken">Username sudah digunakan, silakan pilih yang lain</string>
+    <string name="auth_error_invalid_credentials">Nama pengguna atau kata sandi salah</string>
+    <string name="auth_logout_btn">Keluar</string>
+    <string name="auth_logout">Keluar</string>
+    <string name="auth_logged_in_as">Petugas: %1$s</string>
+    <string name="auth_toggle_to_register">Belum punya akun? Daftar</string>
+    <string name="auth_toggle_to_login">Sudah punya akun? Masuk</string>
+    <string name="auth_bang_patuh_title">BANG PATUH</string>
+    <string name="auth_bang_patuh_subtitle">Compliance Ninja</string>
+    <string name="auth_slogan">Tegakkan Integritas demi Masa Depan Gemilang</string>
+
+    <!-- Language & Audio Controls -->
+    <string name="language_toggle">ID | EN</string>
+    <string name="audio_volume">Audio</string>
+    <string name="audio_mute">Senyapkan Audio</string>
+    <string name="audio_unmute">Bunyikan Audio</string>
+
+    <!-- Level Select & Difficulty -->
+    <string name="level_select_title">Misi</string>
+    <string name="level_select_subtitle">Pilih Tingkat Investigasi</string>
+    <string name="level_slice_hint">Tebas ikon untuk bertugas!</string>
+    <string name="level_locked_notice">Terkunci: Selesaikan misi sebelumnya untuk membuka</string>
+    <string name="level_info_title">Taklimat Misi</string>
+    <string name="level_info_tap_instruction">Ketuk untuk detail • Tebas untuk bertugas</string>
+    <string name="popup_triple_slice">TEBAS TIGA! x2</string>
+    <string name="popup_multi_slice">TEBAS MULTI! x2</string>
+    <string name="difficulty_label">Tingkat Kesulitan:</string>
+    <string name="difficulty_normal">Normal</string>
+    <string name="difficulty_hard">Sulit (Bonus Poin 1.25x)</string>
+    <string name="level_tier_1">Magang</string>
+    <string name="level_tier_2">Staf</string>
+    <string name="level_tier_3">Manajer</string>
+    <string name="level_tier_boss">Pimpinan</string>
+
+    <string name="rank_chief_compliance_ninja">Pimpinan Ninja Kepatuhan</string>
+    <string name="rank_senior_risk_specialist">Spesialis Risiko Senior</string>
+    <string name="rank_lead_investigator">Ketua Investigasi</string>
+    <string name="rank_junior_auditor">Auditor Junior</string>
+    <string name="rank_compliance_intern">Magang Kepatuhan</string>
+
+    <string name="level_number">LEVEL %1$d</string>
+    <string name="level1_name">Pengendalian Internal</string>
+    <string name="level1_desc">Pelajari mengenali suap, kecurangan, dan persetujuan yang sah dalam kondisi terkontrol.</string>
+    <string name="level2_name">Klaim &amp; Fraud</string>
+    <string name="level2_desc">Pantau risiko pencucian uang sambil menghindari alarm palsu dan rumor tak berdasar.</string>
+    <string name="level3_name">Data &amp; Privasi</string>
+    <string name="level3_desc">Ancaman kebocoran data berkecepatan tinggi dan kekhilafan ketik dalam audit yang cepat.</string>
+    <string name="level4_name">Kejahatan Finansial</string>
+    <string name="level4_desc">Bongkar korupsi sistemik yang mengakar di tengah gelombang bahaya regulasi intensif.</string>
+    <string name="level_best_score">Terbaik: %1$d</string>
+    <string name="level_play_btn">INVESTIGASI</string>
+
+    <!-- Leaderboard & Stats -->
+    <string name="leaderboard_title">Peringkat Petugas</string>
+    <string name="leaderboard_tab_global">Top 100 Global</string>
+    <string name="leaderboard_tab_my_stats">Statistik Saya</string>
+    <string name="tab_global_leaderboard">Top 100 Global</string>
+    <string name="tab_my_stats">Statistik Saya</string>
+    <string name="leaderboard_rank_header">#</string>
+    <string name="leaderboard_user_header">PETUGAS</string>
+    <string name="leaderboard_score_header">SKOR</string>
+    <string name="leaderboard_level_header">LEVEL</string>
+    <string name="leaderboard_diff_header">MODE</string>
+    <string name="leaderboard_server_offline">Server Offline</string>
+    <string name="leaderboard_offline_notice">Server Offline — Menampilkan hasil tersimpan</string>
+    <string name="leaderboard_offline_banner">Server Offline — Menampilkan hasil tersimpan</string>
+    <string name="leaderboard_refresh">SEGARKAN</string>
+    <string name="leaderboard_empty">Belum ada peringkat tercatat. Jadilah yang pertama bermain!</string>
+    <string name="stats_overall_best">Skor Terbaik Pribadi</string>
+    <string name="stats_personal_best">Skor Terbaik Pribadi</string>
+    <string name="stats_best_score">Skor Terbaik</string>
+    <string name="stats_achieved_in">Dicapai pada Level %1$d (%2$s)</string>
+    <string name="stats_global_rank">Posisi Global: %1$s</string>
+    <string name="stats_rank_in_top100">Peringkat #%1$d dari 100</string>
+    <string name="stats_global_rank_top100">Peringkat #%1$d dari 100</string>
+    <string name="stats_outside_top100">Di luar Top 100 — terus berjuang!</string>
+    <string name="stats_global_rank_outside">Di luar Top 100 — terus berjuang!</string>
+    <string name="stats_lifetime_heading">Performa Karier</string>
+    <string name="stats_career_totals">Performa Karier</string>
+    <string name="stats_games_played">Tugas Diselesaikan</string>
+    <string name="stats_violations_sliced">Pelanggaran Dinetralisir</string>
+    <string name="stats_traps_avoided">Jebakan Dihindari</string>
+    <string name="stats_traps_sliced">Jebakan Keliru Ditebas</string>
+    <string name="stats_best_combo">Rentetan Kombo Tertinggi</string>
+    <string name="stats_best_combo_streak">Rentetan Kombo Tertinggi</string>
+    <string name="stats_level_table_heading">Penguasaan Level</string>
+    <string name="stats_level_mastery">Penguasaan Level</string>
+    <string name="stats_table_level">Level</string>
+    <string name="stats_table_best">Skor Terbaik</string>
+    <string name="stats_table_stars">Bintang</string>
+
+    <!-- Result Screen Debrief Additions -->
+    <string name="result_traps_heading">PENGENALAN JEBAKAN</string>
+    <string name="result_traps_avoided_label">Berhasil Dihindari: %1$d</string>
+    <string name="result_traps_sliced_label">Keliru Ditebas: %1$d (-10 poin per item)</string>
+    <string name="result_level_label">Level %1$d • Mode %2$s</string>
+    <string name="result_next_level">MISI BERIKUTNYA</string>
+    <string name="debug_overlay_label">Batas Zona Aman</string>
+
+    <!-- Glossary Dialog Strings -->
+    <string name="glossary_dialog_got_it">Tutup</string>
+    <string name="glossary_action_slice">TEBAS INI</string>
+    <string name="glossary_action_avoid">HINDARI (JANGAN TEBAS)</string>
+    <string name="glossary_action_trap">HINDARI (JEBAKAN)</string>
+    <string name="glossary_action_collect">KUMPULKAN (BONUS)</string>
+    <string name="glossary_label_category">Kategori</string>
+    <string name="glossary_label_gameplay_rule">Tindakan Gameplay</string>
+    <string name="glossary_label_compliance_rule">Latar Belakang Kepatuhan</string>
+    <!-- Floating Feedback Strings -->
+    <string name="popup_points_plus">+%1$d POIN</string>
+    <string name="popup_trap_penalty">JEBAKAN! -10 POIN</string>
+    <string name="popup_streak_break">KOMBO PUTUS!</string>
+    <string name="popup_wrong_target">SALAH SASARAN! -1 NYAWA</string>
+    <string name="popup_shield_bonus">+1 NYAWA!</string>
+    <string name="popup_combo_format">KOMBO %1$dx!</string>
+
+    <!-- Mission Select Subtitles & Actions -->
+    <string name="level_slice_to_deploy">Tebas untuk Mulai Misi</string>
+    <string name="level_tap_for_info">Ketuk untuk Taklimat</string>
+    <string name="level_locked_badge">TERKUNCI</string>
+    <string name="level_status_active">AKTIF</string>
+    <string name="level1_subtitle">Persetujuan dasar &amp; anti-suap</string>
+    <string name="level2_subtitle">Klaim finansial &amp; deteksi TPPU</string>
+    <string name="level3_subtitle">Kebocoran data &amp; privasi audit cepat</string>
+    <string name="level4_subtitle">Korupsi sistemik &amp; krisis regulasi</string>
+
+    <!-- Profile Screen Strings -->
+    <string name="profile_title">Profil Petugas</string>
+    <string name="profile_badge_id">ID Petugas: #%1$s</string>
+    <string name="profile_avatar_title">Avatar Petugas</string>
+    <string name="profile_close">Tutup</string>
+
+    <!-- Personal Stats Charts & History Strings -->
+    <string name="stats_chart_category_breakdown">Distribusi Pelanggaran Ditebas</string>
+    <string name="stats_chart_score_progression">Perkembangan Skor (Sesi Terkini)</string>
+    <string name="stats_average_score">Rata-rata Skor</string>
+    <string name="stats_accuracy_rate">Tingkat Akurasi</string>
+    <string name="stats_recent_shifts_title">Riwayat Laporan Tugas</string>
+    <string name="stats_no_history">Belum ada tugas diselesaikan. Mulai misi untuk melihat grafik!</string>
+    <string name="stats_session_date">Tanggal</string>
+    <string name="stats_session_score">Skor</string>
+    <string name="stats_session_mission">Misi</string>
+    <string name="stats_session_accuracy">Akurasi</string>
+    <string name="stats_legend_no_data">Belum ada pelanggaran ditebas</string>
+
+    <!-- Enriched Categories & Explanations -->
+    <string name="cat_insider_trading">Perdagangan Orang Dalam</string>
+    <string name="exp_insider_trading">Berdagang efek berdasarkan informasi rahasia merusak keadilan pasar dan kepercayaan.</string>
+    <string name="cat_conflict_of_interest">Benturan Kepentingan</string>
+    <string name="exp_conflict_of_interest">Memanfaatkan wewenang untuk keuntungan pribadi atau keluarga merusak objektivitas.</string>
+    <string name="cat_embezzlement">Penggelapan Dana</string>
+    <string name="exp_embezzlement">Menyalahgunakan dana titipan perusahaan untuk kepentingan pribadi adalah tindak pidana berat.</string>
+    <string name="cat_compliance_audit">Audit Kepatuhan</string>
+    <string name="exp_compliance_audit">Verifikasi independen untuk memastikan kesesuaian operasional dengan standar regulasi.</string>
+    <string name="cat_ethics_training">Pelatihan Etika</string>
+    <string name="exp_ethics_training">Pembekalan etika berkelanjutan agar seluruh jajaran sigap mencegah pelanggaran integritas.</string>
+    <string name="cat_transparency_report">Laporan Transparansi</string>
+    <string name="exp_transparency_report">Keterbukaan informasi tata kelola yang memperkuat akuntabilitas institusi.</string>
+    <string name="cat_phishing_bait">Umpan Phishing</string>
+    <string name="exp_phishing_bait">Simulasi internal untuk menguji kewaspadaan staf. Selalu verifikasi sebelum memicu alarm.</string>
+    <string name="cat_misfiled_memo">Memo Salah Simpan</string>
+    <string name="exp_misfiled_memo">Kekeliruan pengarsipan dokumen sah. Cukup perbaiki penataan tanpa perlu eskalasi.</string>
+    <string name="cat_whistleblower">Saluran WBS (Pelapor)</string>
+    <string name="exp_whistleblower">Saluran pelaporan rahasia yang melindungi pelapor integritas dan membongkar risiko.</string>
+    <string name="cat_star_auditor">Auditor Teladan</string>
+    <string name="exp_star_auditor">Penghargaan kehormatan atas dedikasi luar biasa dalam tata kelola etika korporat.</string>
+
+    <!-- Mission Briefing & Lock Strings -->
+    <string name="briefing_duration">Mode</string>
+    <string name="briefing_mode_label">Mode</string>
+    <string name="briefing_mode_val">Bertahan</string>
+    <string name="result_time_survived">BERTAHAN: %1$s</string>
+    <string name="briefing_best_score">Skor Terbaik</string>
+    <string name="briefing_stars">Bintang</string>
+    <string name="level_unlock_requirement">Selesaikan Misi %1$d untuk membuka</string>
+    <string name="level_2_unlock_req">Raih skor min. 1.200 di Level 1 untuk membuka Level 2</string>
+    <string name="level_3_unlock_req">Raih skor min. 2.500 di Level 2 untuk membuka Level 3</string>
+    <string name="level_boss_unlock_req">Raih skor min. 5.000 di Level 3 untuk membuka Level BOSS</string>
+    <string name="level_unlock_short">Misi %1$d ★1</string>
+    <string name="menu_footer_features">Tingkat Kesulitan Otomatis • Kombo hingga 4x • Sinkronisasi Cloud</string>
+    <string name="splash_tap_to_skip">Ketuk di mana saja untuk lanjut</string>
+    <string name="splash_content_desc">Layar Pembuka Bang Patuh Compliance Ninja</string>
+    <string name="splash_corporate_desc">Tokio Marine Insurance Group - Presented by Digital Strategy PT Tokio Marine Indonesia</string>
+
+    <!-- Enhanced Rules & Mission UI Strings -->
+    <string name="rules_tab_all">Semua</string>
+    <string name="rules_tab_violations">Pelanggaran</string>
+    <string name="rules_tab_legitimate">Dokumen Sah</string>
+    <string name="rules_tab_traps">Jebakan</string>
+    <string name="rules_tab_bonus">Bonus</string>
+    <string name="rules_directive_slice_title">TEBAS</string>
+    <string name="rules_directive_slice_sub">+10 Poin × Kombo</string>
+    <string name="rules_directive_protect_title">LINDUNGI</string>
+    <string name="rules_directive_protect_sub">-1 Nyawa Penalti</string>
+    <string name="rules_directive_trap_title">HINDARI</string>
+    <string name="rules_directive_trap_sub">-10 Poin Penalti</string>
+    <string name="rules_directive_bonus_title">AMBIL</string>
+    <string name="rules_directive_bonus_sub">+1 Nyawa &amp; +25 Poin</string>
+    <string name="rules_ninja_tip_label">Tips Ninja Bang Patuh</string>
+    <string name="rules_tap_details_hint">Ketuk untuk inspeksi profil taktis</string>
+    <string name="mission_sector_label">SEKTOR %1$d</string>
+    <string name="mission_boss_badge">SEKTOR FINAL</string>
+    <string name="mission_targets_label">Target Ancaman</string>
+    <string name="mission_star_thresholds">Target Bintang</string>
+    <string name="mission_total_stars">Bintang</string>
+    <string name="mission_tap_to_deploy">MULAI</string>
+    <string name="mission_select_prompt">Pilih sektor operasi investigasi</string>
+
+    <!-- Comic Strings -->
+    <string name="menu_trailer_button">Trailer</string>
+    <string name="menu_comic_button">Komik</string>
+    <string name="menu_comic_title">Tori: The Compliance Ninja</string>
+    <string name="comic_episode_counter">Episode %1$d / %2$d</string>
+    <string name="comic_drag_hint">Geser atau usap kiri/kanan untuk melihat episode</string>
+    <string name="comic_close">Tutup</string>
+    <string name="comic_ep1_title">Bahaya Gratifikasi</string>
+    <string name="comic_ep2_title">Jalur Cepat</string>
+    <string name="comic_ep3_title">Uang Capek</string>
+    <string name="comic_ep4_title">Sponsor Sultan yang Bikin Deg-degan</string>
+    <string name="comic_ep5_title">Sulap Anggaran yang Berujung Penjara</string>
+
+    <!-- Forgot Password Strings -->
+    <string name="auth_reset_password_title">Atur Ulang Kata Sandi</string>
+    <string name="auth_reset_password_subtitle">Masukkan username terdaftar dan buat kata sandi baru.</string>
+    <string name="auth_new_password_label">Kata Sandi Baru</string>
+    <string name="auth_new_password_placeholder">Masukkan kata sandi baru</string>
+    <string name="auth_confirm_password_label">Konfirmasi Kata Sandi</string>
+    <string name="auth_confirm_password_placeholder">Masukkan ulang kata sandi</string>
+    <string name="auth_reset_password_button">Simpan Kata Sandi</string>
+    <string name="auth_reset_password_success">Kata sandi berhasil diperbarui! Silakan masuk.</string>
+    <string name="auth_error_passwords_dont_match">Kata sandi konfirmasi tidak cocok</string>
+    <string name="auth_error_user_not_found">Username \'%1$s\' tidak ditemukan</string>
+    <string name="auth_error_password_too_short">Kata sandi minimal 4 karakter</string>
+    <string name="auth_cancel">Batal</string>
+
+    <!-- Gameplay Rules Card & Dialog Strings -->
+    <string name="rules_action_slice">⚔️ TEBAS</string>
+    <string name="rules_action_protect">🛡️ LINDUNGI</string>
+    <string name="rules_action_trap">⚠️ JEBAKAN</string>
+    <string name="rules_action_bonus">💎 BONUS</string>
+
+    <string name="rules_card_point_violations">+10 PTS × Kombo</string>
+    <string name="rules_card_point_legitimate">-1 Nyawa jika tertebas</string>
+    <string name="rules_card_point_traps">-10 Pts jika tertebas</string>
+    <string name="rules_card_point_bonus">+1 Nyawa &amp; +25 Pts</string>
+
+    <string name="rules_dialog_directive_violations">⚔️ WAJIB DITEBAS!</string>
+    <string name="rules_dialog_desc_violations">Segera tebas sebelum jatuh melewati batas layar. Menebas memberikan poin dan menaikkan kombo.</string>
+    <string name="rules_dialog_directive_legitimate">🛡️ LINDUNGI! JANGAN DITEBAS!</string>
+    <string name="rules_dialog_desc_legitimate">Biarkan dokumen sah jatuh bebas. Menebas dokumen sah akan merusak kepatuhan dan mengurangi 1 NYAWA!</string>
+    <string name="rules_dialog_directive_traps">⚠️ JEBAKAN! HINDARI DITEBAS!</string>
+    <string name="rules_dialog_desc_traps">Ini adalah umpan/hoaks yang belum terbukti. Menebasnya akan dikenai PENALTI -10 POIN dan memutus kombo.</string>
+    <string name="rules_dialog_directive_bonus">💎 PERISAI EMAS! SEGERA AMBIL!</string>
+    <string name="rules_dialog_desc_bonus">Tebas perisai emas langka ini untuk memulihkan +1 NYAWA (maksimal 4) dan memperoleh skor bonus +25 poin!</string>
+
+    <string name="rules_dialog_section_game_rules">ATURAN ARENA GAME:</string>
+    <string name="rules_dialog_section_governance">KONTEKS TATA KELOLA:</string>
+
+    <string name="rules_tip_violations">Fokus tebas saat berada di area aman. Jangan biarkan lolos ke bawah!</string>
+    <string name="rules_tip_legitimate">Perhatikan cap resmi atau warna biru. Jangan panik menggesek layar!</string>
+    <string name="rules_tip_traps">Item jebakan sering muncul berdekatan dengan pelanggaran. Teliti sebelum menebas!</string>
+    <string name="rules_tip_bonus">Perisai emas sangat berharga. Utamakan menebasnya untuk memperpanjang shift Anda!</string>
+    <string name="rules_dialog_close">Dimengerti</string>
+    <string name="rules_items_count">%1$d Item</string>
+    <string name="menu_slice_mission_banner">Tebas Pelanggaran</string>
+</resources>

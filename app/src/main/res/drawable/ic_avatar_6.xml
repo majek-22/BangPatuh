@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Circle background -->
+    <path
+        android:fillColor="#2D3E35"
+        android:pathData="M24,2a22,22 0 1,0 0,44a22,22 0 1,0 0,-44z" />
+    <!-- Head/Face -->
+    <path
+        android:fillColor="#FBD5B5"
+        android:pathData="M24,12a6.5,6.5 0 1,0 0,13a6.5,6.5 0 1,0 0,-13z" />
+    <!-- Parted Dark Hair -->
+    <path
+        android:fillColor="#18181B"
+        android:pathData="M16.5,15c0,-6 4,-7.5 7.5,-7.5s7.5,1.5 7.5,7.5c-3,-2 -6,-2 -7.5,-1c-1.5,-1 -4.5,-1 -7.5,1z" />
+    <!-- Sage Green Jacket -->
+    <path
+        android:fillColor="#15803D"
+        android:pathData="M11,42c0,-7 5,-12 13,-12s13,5 13,12z" />
+    <!-- Dark Turtle Neck -->
+    <path
+        android:fillColor="#18181B"
+        android:pathData="M21,28h6v3h-6z" />
+</vector>
