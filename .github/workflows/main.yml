@@ -1,0 +1,58 @@
+name: Build Unsigned iOS IPA
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      - name: Buat Struktur Project iOS
+        run: flutter create . 
+
+      - name: Matikan Sensor Sertifikat
+        run: |
+          echo "CODE_SIGNING_ALLOWED=NO" >> ios/Flutter/Release.xcconfig
+          echo "CODE_SIGNING_REQUIRED=NO" >> ios/Flutter/Release.xcconfig
+          echo "CODE_SIGN_IDENTITY=-" >> ios/Flutter/Release.xcconfig
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      - name: Build iOS tanpa Sertifikat
+        run: flutter build ios --release --no-codesign || true
+
+      - name: Lacak dan Bungkus File .app
+        run: |
+          echo "Melacak lokasi Runner.app yang ditinggalkan Xcode..."
+          
+          # Mencari folder Runner.app di seluruh direktori build
+          APP_LOCATION=$(find build -type d -name "Runner.app" | head -n 1)
+          
+          if [ -n "$APP_LOCATION" ]; then
+            echo "Berhasil mengamankan Runner.app di: $APP_LOCATION"
+            mkdir -p Payload
+            cp -r "$APP_LOCATION" Payload/
+            zip -r app-unsigned.ipa Payload
+          else
+            echo "Gagal: Runner.app sama sekali tidak ada."
+            echo "Jika ini terjadi, berarti BUKAN karena sertifikat, melainkan ada ERROR pada kode Dart/Flutter dari AI Studio."
+            exit 1
+          fi
+
+      - name: Upload File .ipa
+        uses: actions/upload-artifact@v4
+        with:
+          name: aplikasi-ios-ipa
+          path: app-unsigned.ipa # Path disesuaikan karena zip dibuat di folder utama
